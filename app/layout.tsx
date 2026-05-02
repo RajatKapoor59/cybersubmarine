@@ -1,43 +1,37 @@
 import type { Metadata } from "next";
-import { DM_Sans, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { AgentationProvider } from "@/components/AgentationProvider";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { GrainOverlay } from "@/components/GrainOverlay";
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://inkwell.blog"),
+  metadataBase: new URL("https://cybersubmarine.com"),
   title: {
-    default: "Inkwell — Stories Worth Reading",
-    template: "%s — Inkwell",
+    default: "CyberSubmarine — Cybersecurity Guides for Small Business",
+    template: "%s — CyberSubmarine",
   },
   description:
-    "A modern editorial blog. Clean typography, bold visuals, and ideas that stay with you.",
+    "Plain-English cybersecurity guides for small business owners and IT managers. No jargon, no fear-mongering. Just practical advice that actually works.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Inkwell",
-    title: "Inkwell — Stories Worth Reading",
-    description: "A modern editorial blog. Clean typography, bold visuals, and ideas that stay with you.",
-    url: "https://inkwell.blog",
+    siteName: "CyberSubmarine",
+    title: "CyberSubmarine — Cybersecurity Guides for Small Business",
+    description: "Plain-English cybersecurity guides for small business owners and IT managers.",
+    url: "https://cybersubmarine.com",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@inkwellblog",
-    title: "Inkwell — Stories Worth Reading",
-    description: "A modern editorial blog. Clean typography, bold visuals, and ideas that stay with you.",
+    site: "@cybersubmarine",
+    title: "CyberSubmarine — Cybersecurity Guides for Small Business",
+    description: "Plain-English cybersecurity guides for small business owners and IT managers.",
   },
   robots: {
     index: true,
@@ -51,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://inkwell.blog",
+    canonical: "https://cybersubmarine.com",
   },
 };
 
@@ -61,17 +55,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html lang="en" className={inter.variable}>
       <head>
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Inkwell RSS Feed"
+          title="CyberSubmarine RSS Feed"
           href="/feed.xml"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet"
         />
         <script
           type="application/ld+json"
@@ -79,22 +69,19 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Inkwell",
-              url: "https://inkwell.blog",
-              description: "A modern editorial blog. Clean typography, bold visuals, and ideas that stay with you.",
+              name: "CyberSubmarine",
+              url: "https://cybersubmarine.com",
+              description: "Plain-English cybersecurity guides for small business owners and IT managers.",
               publisher: {
                 "@type": "Organization",
-                name: "Inkwell",
-                url: "https://inkwell.blog",
+                name: "CyberSubmarine",
+                url: "https://cybersubmarine.com",
               },
             }),
           }}
         />
       </head>
-      <body
-        className={`${spaceGrotesk.variable} font-[family-name:var(--font-body)] antialiased`}
-        style={{ "--font-display": "'Cormorant Garamond', serif" } as React.CSSProperties}
-      >
+      <body className="font-[family-name:var(--font-body)] antialiased">
         <SmoothScroll>
           {children}
         </SmoothScroll>

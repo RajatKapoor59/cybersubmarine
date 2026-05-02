@@ -5,6 +5,12 @@ import { Category } from '@/data/categories'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
+export interface SanityFaq {
+  _id: string
+  question: string
+  answer: unknown[]
+}
+
 export interface SanityPost {
   _id: string
   slug: string
@@ -12,11 +18,21 @@ export interface SanityPost {
   excerpt: string
   coverImage?: { asset: { url: string }; alt?: string }
   publishedAt: string
-  author: { name: string; slug: string; avatar?: { asset: { url: string } }; bio?: string; twitter?: string; website?: string }
+  author: {
+    name: string
+    slug: string
+    role?: string
+    avatar?: { asset: { url: string } }
+    bio?: string
+    twitter?: string
+    website?: string
+  }
   category: { name: string; slug: string; color?: string }
   tags: string[]
   featured?: boolean
   body?: unknown[]
+  keyTakeaways?: string[]
+  faqs?: SanityFaq[]
 }
 
 // ─── Converters ───────────────────────────────────────────────────────────────
@@ -29,7 +45,7 @@ function toPostMeta(p: SanityPost): PostMeta {
     coverImage: p.coverImage?.asset?.url ?? '/blog/design-product.webp',
     date: p.publishedAt ? p.publishedAt.split('T')[0] : '',
     author: p.author?.slug ?? 'emma-chen',
-    category: p.category?.slug ?? 'design',
+    category: p.category?.slug ?? 'soc-monitoring',
     tags: p.tags ?? [],
     featured: p.featured ?? false,
     readingTime: estimateReadingTime(p.body),
@@ -52,7 +68,7 @@ const POST_FIELDS = `
   excerpt,
   coverImage { asset->{ url }, alt },
   publishedAt,
-  author->{ name, "slug": slug.current, avatar { asset->{ url } }, bio, twitter, website },
+  author->{ name, "slug": slug.current, role, avatar { asset->{ url } }, bio, twitter, website },
   category->{ name, "slug": slug.current, color },
   tags,
   featured
@@ -60,7 +76,9 @@ const POST_FIELDS = `
 
 const POST_FIELDS_WITH_BODY = `
   ${POST_FIELDS},
-  body
+  body,
+  keyTakeaways,
+  faqs[]->{ _id, question, answer }
 `
 
 export async function getAllPosts(): Promise<PostMeta[]> {
@@ -138,7 +156,7 @@ export async function getAllCategories(): Promise<Category[]> {
 
 export async function getAuthorBySlug(slug: string): Promise<Author | null> {
   const a = await client.fetch(
-    `*[_type == "author" && slug.current == $slug][0] { name, "id": slug.current, bio, avatar { asset->{ url } }, twitter, website }`,
+    `*[_type == "author" && slug.current == $slug][0] { name, "id": slug.current, bio, role, avatar { asset->{ url } }, twitter, website }`,
     { slug }
   )
   if (!a) return null

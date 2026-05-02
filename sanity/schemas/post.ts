@@ -24,7 +24,7 @@ export const post = defineType({
       title: 'Excerpt',
       type: 'text',
       rows: 3,
-      description: 'A short summary shown in post listings',
+      description: 'A short summary shown in post listings and meta descriptions',
       validation: (Rule) => Rule.required().max(300),
     }),
     defineField({
@@ -40,6 +40,14 @@ export const post = defineType({
           description: 'Describe the image for accessibility',
         }),
       ],
+    }),
+    defineField({
+      name: 'keyTakeaways',
+      title: 'Key Takeaways',
+      type: 'array',
+      description: 'Bullet points shown at the top of the article (written manually)',
+      of: [{ type: 'string' }],
+      options: { layout: 'list' },
     }),
     defineField({
       name: 'body',
@@ -91,6 +99,13 @@ export const post = defineType({
           ],
         },
       ],
+    }),
+    defineField({
+      name: 'faqs',
+      title: 'FAQs',
+      type: 'array',
+      description: 'Select FAQs to display at the bottom of this post. Create FAQs in the FAQ section first.',
+      of: [{ type: 'reference', to: [{ type: 'faq' }] }],
     }),
     defineField({
       name: 'author',

@@ -19,6 +19,12 @@ export const author = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'role',
+      title: 'Role / Title',
+      type: 'string',
+      description: 'e.g. "Cybersecurity Writer" or "Senior IT Consultant"',
+    }),
+    defineField({
       name: 'bio',
       title: 'Bio',
       type: 'text',

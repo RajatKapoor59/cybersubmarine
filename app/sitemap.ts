@@ -3,7 +3,7 @@ import { posts } from "@/data/posts";
 import { categories } from "@/data/categories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://inkwell.blog";
+  const baseUrl = "https://cybersubmarine.com";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

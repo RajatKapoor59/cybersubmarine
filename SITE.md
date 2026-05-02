@@ -1,55 +1,44 @@
-# Inkwell — Minimal Blog
+# CyberSubmarine — Cybersecurity Guides for Small Business
 
-> An editorial magazine-style blog built for readers who care about craft. Words first, always.
+> Practical, plain-English cybersecurity for SMBs and IT managers. No jargon. No fear-mongering. Just advice that works.
 
 ## Brand Identity
 
-- **Personality**: Editorial, intentional, refined. Inspired by Monocle, The Outline, It's Nice That.
-- **Colors**: Warm off-white background (#F8F6F3), near-black text (#141414), warm muted (#7A7A7A), burnt orange accent (#E54D2E), soft surface (#EFEDE8), warm border (#DBD8D0)
-- **Fonts**: Playfair Display (serif, headlines/display) + Inter (sans-serif, body text) — classic editorial pairing
-- **Design philosophy**: Sharp geometry, generous whitespace, asymmetric layouts. No rounded pills, no gradient backgrounds. Borders and underlines over fills.
+- **Personality**: Direct, calm, practical. The Economist meets cybersecurity consultancy. Trusted authority without condescension.
+- **Colors**: Deep navy background (#F5F7FA light, #0D1B2A dark/nav), teal accent (#00B4D8), muted blue-grey text (#5A6A7A), light surface (#EEF2F7), border (#D1D9E6)
+- **Fonts**: Inter (clean modern sans-serif, body + headings — no decorative serif)
+- **Design philosophy**: Clean, confident, information-dense. Dark navy navbar on all pages. Teal as the sole accent color. Cards with subtle borders, no heavy shadows. Content-first.
 
 ## Pages
 
-- **Homepage** (`/`) — Editorial hero with GSAP clip-path reveal, topic marquee, featured posts (asymmetric layout), tabbed latest articles, categories horizontal scroll, post slider, FAQ accordion, dark CTA section, newsletter signup
+- **Homepage** (`/`) — Dark navy hero (H1: "Cybersecurity Guides for Small Business — Without the Jargon"), Who This Is For (3-column), Topic Pillars (6 category cards), Start Here (curated 4 articles), Latest Guides (3-col grid), Trust Signals, Newsletter (footer)
 - **Blog Listing** (`/blog`) — Search bar, category underline tabs, paginated 3-column grid with GSAP scroll reveals
-- **Single Post** (`/blog/[slug]`) — Full-width cover image, two-column layout with article body (editorial typography, table of contents, reading time, author box, tags) and a sticky sidebar (about blurb, subscribe form, recent posts, categories with counts, tag cloud, reading stats), related posts full-width below
+- **Single Post** (`/blog/[slug]`) — Full-width cover image, two-column layout with article body and sticky sidebar, related posts below
 - **Categories** (`/categories/[category]`) — Filtered posts by topic with color accent strip
-- **About** (`/about`) — Dark hero with asymmetric clipped image and floating stat card, sticky pull-quote story section, values card grid with icons on surface background, horizontal stats strip, team cards with avatars, vertical timeline, dual-CTA section, newsletter bar
-- **Contact** (`/contact`) — Dark hero with split layout (bold typography left, decorative accent circle with quote right), GSAP stagger reveal, status pill with ping animation, contact pills, separate form section below, "Ways to Connect" cards, FAQ accordion
-- **404** — Clean not-found page with large translucent number
+- **About** (`/about`) — *Needs rebuild for CyberSubmarine*
+- **Contact** (`/contact`) — *Needs rebuild for CyberSubmarine*
+- **404** — Clean not-found page
 
 ## Components
 
 ### Layout
-- **Navbar** — Fixed position, GSAP scroll-based transparent-to-blur background, underline nav indicators, subscribe button links to #newsletter
-- **Footer** — Dark inverted (bg uses --fg), large serif headline, 4-column grid (Brand, Navigate, Topics, Legal), links to actual category pages
-- **NewsletterBar** — Email signup with envelope icon, success state with green checkmark
+- **Navbar** — Fixed, always dark navy (#0D1B2A), teal accent on active links, "Get free guides" CTA button, GSAP mobile menu, border fades in on scroll
+- **Footer** — Dark navy, newsletter form, 4-column grid (Brand, Navigate, Topics, Legal), affiliate disclosure, teal accent
 
-### Blog
-- **BlogCard** — GSAP scroll-triggered reveal, image hover scale, category color as inline text, vertical/horizontal layouts
-- **BlogGrid** — Responsive 3-column grid
-- **TableOfContents** — Collapsible with CSS max-height transition, IntersectionObserver scroll spy, accent underline for active heading
-- **AuthorBox** — Real author image, border-top/bottom dividers, "Written by" uppercase label
-- **RelatedPosts** — Border-top divider, accent label, serif heading
-- **BlogSidebar** — Sticky sidebar with about blurb, compact subscribe form, recent posts (thumbnail + title), categories list with color dots and counts, tag cloud, reading stats grid
+### Homepage Sections (all new for CyberSubmarine)
+- **CyberHero** — Dark navy full-height hero, grid pattern background, teal orb, H1 in three staggered lines, two CTAs, trust bar with audience types
+- **WhoThisIsFor** — 3-column card grid: IT Managers, Small Business Owners, Compliance Leads
+- **TopicPillars** — 6-card grid: SOC & Monitoring, M365 Security, Managed Security, Compliance, Incident Response, Tool Comparisons — with colored top strips
+- **StartHere** — 4 curated articles (first is full-width), pulls from Sanity or shows fallback cards
+- **LatestGuides** — 3-column grid of most recent posts with cover images
+- **TrustSignals** — Stats row (60+ guides, no ads, plain English, vendor-neutral) + principles list
 
-### Sections
-- **HeroSection** — GSAP staggered headline reveal ("Stories / worth / reading."), clip-path image reveal, parallax on scroll
-- **MarqueeSection** — Two rows with opposite CSS animation directions, colored dots, thin borders, edge fade gradients
-- **FeaturedPostsSection** — Asymmetric layout (hero card 60/40 split + two vertical), GSAP clip-path reveal on hero image
-- **TabsSection** — Bottom underline indicator (not pills), CSS keyframe fade animation on tab switch, 3-column card grid
-- **CategoriesSection** — Horizontal snap scroll, 220px cards with colored top strip, icons, arrow on hover, GSAP stagger reveal
-- **PostSlider** — Horizontal scroll carousel with arrow buttons, 320px cards
-- **FAQSection** — Border-bottom accordion, plus-to-X rotation, CSS max-height transitions
-- **CTASection** — Dark background with dot-grid SVG pattern, GSAP timeline reveal
-
-### UI
-- **Badge** — Simple colored text with uppercase tracking (no background)
+### Blog (unchanged structure)
+- **BlogCard**, **BlogGrid**, **TableOfContents**, **AuthorBox**, **RelatedPosts**, **BlogSidebar** — same as before but will pick up new color scheme
 
 ## Data
 
-All blog content in `data/posts.ts` with 8 sample articles. Categories in `data/categories.ts` (design, development, creativity, productivity, writing). Authors in `data/authors.ts`.
+All blog content managed in Sanity CMS. Categories in `data/categories.ts` (6 CyberSubmarine topics: soc-monitoring, microsoft-365, managed-security, compliance, incident-response, tool-comparisons). Static fallback posts in `data/posts.ts` (Inkwell placeholder content — will be replaced as real articles are published in Sanity).
 
 ## Images
 
@@ -123,10 +112,7 @@ The site is deployed on Vercel. To deploy:
 
 ## Recent Changes
 
-- May 2, 2026: Connected Sanity CMS — all content now managed from Studio at /studio. Seeded 2 authors, 5 categories, 8 posts. Updated all pages and homepage sections to fetch from Sanity with 60s revalidation.
-- April 30, 2026: Full QA pass — SEO (sitemap, robots, OG/Twitter cards, metadata on all pages, canonical URLs), responsive fixes (mobile text sizing, touch targets, padding), content fixes (AuthorBox avatar, form accessibility, broken links, color consistency)
-- April 30, 2026: Redesigned about page — dark hero with clipped image, pull-quote story layout, icon value cards, team section, timeline, dual CTA
-- April 30, 2026: Enhanced contact page with "Ways to Connect" card grid and FAQ accordion section
-- April 30, 2026: Added sidebar to single blog post page — two-column layout with sticky sidebar containing about section, subscribe form, recent posts, categories, tags cloud, and reading stats
-- April 28, 2026: Complete editorial redesign — GSAP animations, Playfair Display + Inter fonts, Lenis smooth scroll, grain overlay, clip-path reveals, editorial magazine aesthetic
-- April 27, 2026: Initial build with all pages and components
+- May 2, 2026: **Complete rebrand to CyberSubmarine** — new color scheme (navy/teal), Inter font, CyberSubmarine navbar and footer, 6 new topic categories, rebuilt homepage with 6 new sections (CyberHero, WhoThisIsFor, TopicPillars, StartHere, LatestGuides, TrustSignals). About and contact pages still need rebuild.
+- May 2, 2026: Connected Sanity CMS — all content now managed from Studio at /studio. Seeded authors, categories, posts.
+- April 30, 2026: Full QA pass — SEO, responsive fixes, content fixes
+- April 28, 2026: Initial build with Inkwell editorial theme (now replaced)

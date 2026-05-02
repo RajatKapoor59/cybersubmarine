@@ -1,6 +1,6 @@
 export const navigation = [
-  { label: "Home", href: "/" },
-  { label: "Blog", href: "/blog" },
+  { label: "Guides", href: "/blog" },
+  { label: "Topics", href: "/categories" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

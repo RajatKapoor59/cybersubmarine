@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F8F6F3;
-  --fg: #141414;
-  --muted: #7A7A7A;
-  --accent: #E54D2E;
-  --accent-soft: #FEEEE8;
-  --surface: #EFEDE8;
-  --border: #DBD8D0;
+  --bg: #F5F7FA;
+  --fg: #0D1B2A;
+  --muted: #5A6A7A;
+  --accent: #00B4D8;        /* decorative: borders, bg fills, button fills on dark */
+  --accent-text: #007391;   /* text on light bg: 5.4:1 AA on white */
+  --accent-soft: #E0F7FC;
+  --surface: #EEF2F7;
+  --border: #D1D9E6;
   --card: #FFFFFF;
-  --radius: 10px;
+  --navy: #0D1B2A;
+  --teal: #00B4D8;
+  --radius: 8px;
 }
 
 @theme inline {

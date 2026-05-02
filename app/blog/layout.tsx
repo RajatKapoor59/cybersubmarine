@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Articles on design, development, creativity, productivity, and the craft of writing for the web.",
+  title: "Guides",
+  description: "Plain-English cybersecurity guides for small business owners, IT managers, and compliance leads.",
   openGraph: {
-    title: "Blog — Inkwell",
-    description: "Articles on design, development, creativity, productivity, and the craft of writing for the web.",
+    title: "Guides — CyberSubmarine",
+    description: "Plain-English cybersecurity guides for small business owners, IT managers, and compliance leads.",
     url: "/blog",
   },
   alternates: {
