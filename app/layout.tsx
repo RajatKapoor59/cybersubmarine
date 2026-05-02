@@ -4,6 +4,7 @@ import "./globals.css";
 import { AgentationProvider } from "@/components/AgentationProvider";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { GrainOverlay } from "@/components/GrainOverlay";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
         </SmoothScroll>
         <GrainOverlay />
         <AgentationProvider />
+        <Analytics />
       </body>
     </html>
   );
