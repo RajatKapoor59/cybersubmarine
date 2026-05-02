@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__sanity__whoami",
+      "mcp__sanity__list_projects",
+      "mcp__sanity__list_organizations",
+      "mcp__sanity__create_project",
+      "Bash(npm install *)",
+      "mcp__sanity__create_documents_from_json",
+      "mcp__sanity__publish_documents",
+      "Bash(npx tsc *)",
+      "mcp__sanity__add_cors_origin",
+      "Bash(gh auth *)",
+      "Bash(git -C /Users/rajatkapoor/ShipStudio/cybersubmarine status)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "playwright",
+    "sanity"
+  ]
+}
