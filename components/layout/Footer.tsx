@@ -6,8 +6,6 @@ import Link from "next/link";
 const guideLinks = [
   { label: "All Guides", href: "/blog" },
   { label: "Topics", href: "/categories" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const topicLinks = [
