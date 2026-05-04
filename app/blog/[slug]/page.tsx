@@ -242,7 +242,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {/* Body */}
               <div className="article-body">
                 {sanityPost?.body ? (
-                  <PortableTextRenderer value={sanityPost.body as unknown[]} />
+                  <PortableTextRenderer value={sanityPost.body as unknown[]} slug={slug} />
                 ) : mdxPost?.content ? (
                   <div className="prose-editorial">
                     <MDXRemote source={mdxPost.content} components={mdxComponents} />

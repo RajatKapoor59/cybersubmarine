@@ -2,7 +2,7 @@ import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
 import { slugify } from "@/lib/toc";
 
-const components: PortableTextComponents = {
+const components = (slug: string): PortableTextComponents => ({
   block: {
     h2: ({ children }) => (
       <h2
@@ -61,16 +61,19 @@ const components: PortableTextComponents = {
         {children}
       </code>
     ),
-    link: ({ value, children }) => (
-      <a
-        href={value?.href}
-        target={value?.blank ? "_blank" : undefined}
-        rel={value?.blank ? "noopener noreferrer" : undefined}
-        className="text-[var(--accent-text)] underline underline-offset-2 decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
-      >
-        {children}
-      </a>
-    ),
+    link: ({ value, children }) => {
+      const href = appendCyberQuellUtm(value?.href, slug);
+      return (
+        <a
+          href={href}
+          target={value?.blank ? "_blank" : undefined}
+          rel={value?.blank ? "noopener noreferrer" : undefined}
+          className="text-[var(--accent-text)] underline underline-offset-2 decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
+        >
+          {children}
+        </a>
+      );
+    },
   },
   types: {
     image: ({ value }) => {
@@ -97,7 +100,7 @@ const components: PortableTextComponents = {
       );
     },
   },
-};
+});
 
 function extractText(children: React.ReactNode): string {
   if (!children) return "";
@@ -110,11 +113,27 @@ function extractText(children: React.ReactNode): string {
   return "";
 }
 
+function appendCyberQuellUtm(href: string | undefined, slug: string): string | undefined {
+  if (!href) return href;
+  try {
+    const url = new URL(href);
+    if (!url.hostname.includes("cyberquell.com")) return href;
+    url.searchParams.set("utm_source", "cybersubmarine");
+    url.searchParams.set("utm_medium", "referral");
+    url.searchParams.set("utm_campaign", "editorial");
+    url.searchParams.set("utm_content", slug);
+    return url.toString();
+  } catch {
+    return href;
+  }
+}
+
 interface PortableTextRendererProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   value: any[];
+  slug?: string;
 }
 
-export function PortableTextRenderer({ value }: PortableTextRendererProps) {
-  return <PortableText value={value} components={components} />;
+export function PortableTextRenderer({ value, slug = "" }: PortableTextRendererProps) {
+  return <PortableText value={value} components={components(slug)} />;
 }
