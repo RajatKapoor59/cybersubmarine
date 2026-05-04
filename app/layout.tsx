@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { AgentationProvider } from "@/components/AgentationProvider";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { GrainOverlay } from "@/components/GrainOverlay";
+
+const GA_ID = "G-4HYJYNT2NE";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +50,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cybersubmarine.com",
   },
+  verification: {
+    google: "i-TEj1-V1rtXWWFI7t3bL43fz1RD4aMNc5Ia5LHwBGA",
+  },
 };
 
 export default function RootLayout({
@@ -87,6 +93,10 @@ export default function RootLayout({
         </SmoothScroll>
         <GrainOverlay />
         <AgentationProvider />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );
