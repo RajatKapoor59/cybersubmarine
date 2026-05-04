@@ -12,6 +12,7 @@ function computeReadingTime(content: string): number {
 }
 
 export function getPostSlugs(): string[] {
+  if (!fs.existsSync(postsDirectory)) return [];
   return fs
     .readdirSync(postsDirectory)
     .filter((file) => file.endsWith(".mdx"))
