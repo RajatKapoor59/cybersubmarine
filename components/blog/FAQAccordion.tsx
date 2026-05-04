@@ -62,7 +62,11 @@ export function FAQAccordion({ faqs }: FAQAccordionProps) {
               >
                 <div className="px-6 pb-5 pt-0">
                   <div className="prose-editorial text-[0.9375rem] text-[var(--muted)]">
-                    <PortableText value={faq.answer as Parameters<typeof PortableText>[0]["value"]} />
+                    {typeof faq.answer === "string" ? (
+                      <p>{faq.answer}</p>
+                    ) : (
+                      <PortableText value={faq.answer as Parameters<typeof PortableText>[0]["value"]} />
+                    )}
                   </div>
                 </div>
               </div>

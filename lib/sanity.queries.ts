@@ -8,7 +8,7 @@ import { Category } from '@/data/categories'
 export interface SanityFaq {
   _id: string
   question: string
-  answer: unknown[]
+  answer: string | unknown[]
 }
 
 export interface SanityPost {
