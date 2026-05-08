@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://inkwell.blog/sitemap.xml",
+    sitemap: "https://cybersubmarine.com/sitemap.xml",
   };
 }
