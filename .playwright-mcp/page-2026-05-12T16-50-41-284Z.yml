@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "CyberSubmarine" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: CyberSubmarine
+      - generic [ref=e11]:
+        - link "Guides" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+          - text: Guides
+        - link "Topics" [ref=e14] [cursor=pointer]:
+          - /url: /categories
+          - text: Topics
+      - link "Get free guides" [ref=e16] [cursor=pointer]:
+        - /url: /#newsletter
+  - generic [ref=e18]:
+    - navigation [ref=e19]:
+      - link "All Guides" [ref=e20] [cursor=pointer]:
+        - /url: /blog
+      - img [ref=e21]
+      - link "Design" [ref=e23] [cursor=pointer]:
+        - /url: /categories/design
+      - img [ref=e24]
+      - generic [ref=e26]: "The Art of Less: Why Minimalism Wins in Design"
+    - generic [ref=e27]:
+      - generic [ref=e28]: Design
+      - generic [ref=e29]: 3 min read
+      - generic [ref=e30]: ·
+      - time [ref=e31]: April 20, 2026
+    - 'heading "The Art of Less: Why Minimalism Wins in Design" [level=1] [ref=e32]'
+    - paragraph [ref=e33]: Every element on your page is a decision. The best designers know that what you leave out matters more than what you put in.
+    - generic [ref=e34]:
+      - img "Rajat Kapoor" [ref=e36]
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: Rajat Kapoor
+        - paragraph [ref=e39]: SOC Analyst & Marketer
+  - main [ref=e40]:
+    - generic [ref=e42]:
+      - article [ref=e43]:
+        - generic [ref=e44]:
+          - link "#minimalism" [ref=e45] [cursor=pointer]:
+            - /url: /tags/minimalism
+          - link "#design-philosophy" [ref=e46] [cursor=pointer]:
+            - /url: /tags/design-philosophy
+          - link "#typography" [ref=e47] [cursor=pointer]:
+            - /url: /tags/typography
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: About the author
+          - generic [ref=e50]:
+            - img "Rajat Kapoor" [ref=e52]
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - heading "Rajat Kapoor" [level=4] [ref=e55]
+                - generic [ref=e56]: SOC Analyst & Marketer
+              - paragraph [ref=e57]: Rajat bridges the gap between cybersecurity and business — translating complex SOC operations and threat intelligence into clear, actionable content that IT managers and business owners can actually use. With a background spanning SOC analysis and B2B marketing, he helps organisations understand their risk without the jargon.
+              - generic [ref=e58]:
+                - link "@emmachen" [ref=e59] [cursor=pointer]:
+                  - /url: https://twitter.com/emmachen
+                  - img [ref=e60]
+                  - text: "@emmachen"
+                - link "Website" [ref=e62] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/rajatkapoor05/
+                  - img [ref=e63]
+                  - text: Website
+      - complementary [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: Free weekly guides
+            - paragraph [ref=e70]: One practical cybersecurity guide per week. No jargon, no scare tactics.
+            - link "Subscribe free" [ref=e71] [cursor=pointer]:
+              - /url: /#newsletter
+          - generic [ref=e72]:
+            - paragraph [ref=e74]: Related Guides
+            - generic [ref=e75]:
+              - 'link "Typography on Screen: Getting the Details Right 3 min read" [ref=e76] [cursor=pointer]':
+                - /url: /blog/typography-on-screen
+                - generic [ref=e77]:
+                  - paragraph [ref=e78]: "Typography on Screen: Getting the Details Right"
+                  - paragraph [ref=e79]: 3 min read
+              - link "Color Theory for People Who Just Want Things to Look Good 3 min read" [ref=e80] [cursor=pointer]:
+                - /url: /blog/color-theory-practical
+                - generic [ref=e81]:
+                  - paragraph [ref=e82]: Color Theory for People Who Just Want Things to Look Good
+                  - paragraph [ref=e83]: 3 min read
+              - link "Best managed XDR providers for Microsoft 365 SMBs in 2026 3 min read" [ref=e84] [cursor=pointer]:
+                - /url: /blog/best-managed-xdr-microsoft-365-smbs-2026
+                - generic [ref=e85]:
+                  - paragraph [ref=e86]: Best managed XDR providers for Microsoft 365 SMBs in 2026
+                  - paragraph [ref=e87]: 3 min read
+  - contentinfo [ref=e88]:
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - paragraph [ref=e92]: Free weekly guides
+        - heading "Cybersecurity made simple for your team." [level=2] [ref=e93]:
+          - text: Cybersecurity made
+          - text: simple for your team.
+      - generic [ref=e94]:
+        - paragraph [ref=e95]: One practical guide per week. No jargon, no scare tactics. Unsubscribe anytime.
+        - generic [ref=e96]:
+          - textbox "Work email address" [ref=e97]
+          - button "Subscribe" [ref=e98]
+        - paragraph [ref=e99]: No spam. No upsells. Just useful security content.
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - img [ref=e107]
+          - generic [ref=e110]: CyberSubmarine
+        - paragraph [ref=e111]: Practical cybersecurity for small business — without the jargon or the consultant fee.
+      - generic [ref=e112]:
+        - heading "Navigate" [level=3] [ref=e113]
+        - list [ref=e114]:
+          - listitem [ref=e115]:
+            - link "All Guides" [ref=e116] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e117]:
+            - link "Topics" [ref=e118] [cursor=pointer]:
+              - /url: /categories
+      - generic [ref=e119]:
+        - heading "Topics" [level=3] [ref=e120]
+        - list [ref=e121]:
+          - listitem [ref=e122]:
+            - link "SOC & Monitoring" [ref=e123] [cursor=pointer]:
+              - /url: /categories/soc-monitoring
+          - listitem [ref=e124]:
+            - link "Microsoft 365 Security" [ref=e125] [cursor=pointer]:
+              - /url: /categories/microsoft-365
+          - listitem [ref=e126]:
+            - link "Managed Security" [ref=e127] [cursor=pointer]:
+              - /url: /categories/managed-security
+          - listitem [ref=e128]:
+            - link "Compliance" [ref=e129] [cursor=pointer]:
+              - /url: /categories/compliance
+          - listitem [ref=e130]:
+            - link "Incident Response" [ref=e131] [cursor=pointer]:
+              - /url: /categories/incident-response
+          - listitem [ref=e132]:
+            - link "Tool Comparisons" [ref=e133] [cursor=pointer]:
+              - /url: /categories/tool-comparisons
+      - generic [ref=e134]:
+        - heading "Legal" [level=3] [ref=e135]
+        - list [ref=e136]:
+          - listitem [ref=e137]:
+            - link "Privacy Policy" [ref=e138] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e139]:
+            - link "Terms of Use" [ref=e140] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e141]:
+            - link "Disclosure" [ref=e142] [cursor=pointer]:
+              - /url: "#"
+        - paragraph [ref=e144]: CyberSubmarine may earn affiliate revenue from some tool links. We only recommend tools we'd use ourselves.
+    - generic [ref=e148]:
+      - paragraph [ref=e149]: © 2026 CyberSubmarine. All rights reserved.
+      - paragraph [ref=e150]: Plain-English security guides for the teams that need them most.
+  - alert [ref=e151]

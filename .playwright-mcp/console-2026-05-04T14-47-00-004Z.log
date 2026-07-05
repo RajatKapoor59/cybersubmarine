@@ -1,0 +1,11 @@
+[    3300ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[    3300ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[    3300ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[    3300ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[    3816ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://cybersubmarine.com/_next/image?url=%2Fauthors%2Femma-chen.jpg&w=1200&q=75:0
+[    3879ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cybersubmarine.com/categories?_rsc=1wzbf:0
+[   18511ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[   18511ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[   18511ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[   18511ms] [WARNING] [@portabletext/react] Unknown block type "undefined", specify a component for it in the `components.types` prop @ https://cybersubmarine.com/_next/static/chunks/1581939bd7903149.js:0
+[   19006ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://cybersubmarine.com/_next/image?url=%2Fauthors%2Femma-chen.jpg&w=1200&q=75:0

@@ -1,0 +1,363 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "CyberSubmarine" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: CyberSubmarine
+      - generic [ref=e11]:
+        - link "Guides" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+          - text: Guides
+        - link "Topics" [ref=e14] [cursor=pointer]:
+          - /url: /categories
+          - text: Topics
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: /about
+          - text: About
+        - link "Contact" [ref=e16] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact
+      - link "Get free guides" [ref=e18] [cursor=pointer]:
+        - /url: /#newsletter
+  - generic [ref=e20]:
+    - navigation [ref=e21]:
+      - link "All Guides" [ref=e22] [cursor=pointer]:
+        - /url: /blog
+      - img [ref=e23]
+      - generic [ref=e25]: What cyber insurance actually covers (and what it doesn't)
+    - generic [ref=e26]:
+      - generic [ref=e28]: 7 min read
+      - generic [ref=e29]: ·
+      - time [ref=e30]: May 4, 2026
+    - heading "What cyber insurance actually covers (and what it doesn't)" [level=1] [ref=e31]
+    - paragraph [ref=e32]: Cyber insurance for businesses sounds simple but policies have sharp edges. Here is what cover includes, what it excludes, and how a claim actually lands.
+    - generic [ref=e33]:
+      - img "Emma Chen" [ref=e35]
+      - paragraph [ref=e37]: Emma Chen
+  - main [ref=e38]:
+    - generic [ref=e40]:
+      - article [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - img [ref=e45]
+            - generic [ref=e48]: Key Takeaways
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - generic [ref=e53]: Cyber insurance for businesses typically covers incident response costs, business interruption losses, regulatory fines where insurable, and third-party liability.
+            - listitem [ref=e54]:
+              - generic [ref=e57]: Policies typically exclude nation-state attacks, prior-known incidents, unpatched systems, social engineering of payments above a sub-limit, and breaches caused by missing controls.
+            - listitem [ref=e58]:
+              - generic [ref=e61]: Insurers expect specific controls before they pay out. The most common are MFA on all accounts, EDR on every endpoint, off-site backups, and patched internet-facing systems.
+            - listitem [ref=e62]:
+              - generic [ref=e65]: A claim is decided by post-breach forensics, not the policy summary. If forensics show the breach exploited a missing control, the payout is usually reduced or refused.
+            - listitem [ref=e66]:
+              - generic [ref=e69]: Cyber insurance is a financial backstop, not a substitute for controls. It works best when the controls are already strong.
+            - listitem [ref=e70]:
+              - generic [ref=e73]: Premiums for SMBs in 2026 typically range from £1,500 to £15,000 per year for £1 million to £5 million of cover, with sharp variation by industry and controls.
+        - generic [ref=e74]:
+          - heading "Why this matters" [level=2] [ref=e75]
+          - paragraph [ref=e76]: "Cyber insurance has become a default line on SMB renewal sheets. The policy summary makes it look simple: pay a premium, get a payout if something goes wrong. The reality is sharper. Insurers have spent the last five years tightening cover, adding sub-limits, and embedding control conditions that decide whether your claim ever pays out."
+          - paragraph [ref=e77]: The result is a market where two businesses can hold "the same" policy and have completely different outcomes after a breach, because one was actually running the controls the policy required. This article walks through what cyber insurance for businesses actually covers, what it deliberately does not, and what makes a claim land or fail.
+          - heading "What cyber insurance for businesses actually covers" [level=2] [ref=e78]
+          - paragraph [ref=e79]: Most modern policies in 2026 split cover into first-party and third-party sections.
+          - paragraph [ref=e80]: "First-party cover (your own losses):"
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - generic [ref=e84]: "Incident response costs: forensic investigation, breach coaching, legal counsel."
+            - listitem [ref=e85]:
+              - generic [ref=e87]: "Business interruption: lost revenue while systems are down, usually after a waiting period."
+            - listitem [ref=e88]:
+              - generic [ref=e90]: "Data restoration: the cost of rebuilding systems and recovering data from backups."
+            - listitem [ref=e91]:
+              - generic [ref=e93]: "Cyber extortion: ransom payments, where insurable in your jurisdiction and within sub-limits."
+            - listitem [ref=e94]:
+              - generic [ref=e96]: "Regulatory defence costs: legal fees for dealing with the ICO, FCA, or sector regulators."
+            - listitem [ref=e97]:
+              - generic [ref=e99]: "Notification costs: contacting affected customers, credit monitoring services."
+          - paragraph [ref=e100]: "Third-party cover (your liability to others):"
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - generic [ref=e104]: "Privacy liability: claims from individuals whose data was exposed."
+            - listitem [ref=e105]:
+              - generic [ref=e107]: "Network security liability: claims from third parties whose systems you damaged."
+            - listitem [ref=e108]:
+              - generic [ref=e110]: "Regulatory fines: where insurable. Many jurisdictions limit this. UK GDPR fines, for instance, are not always insurable in full."
+            - listitem [ref=e111]:
+              - generic [ref=e113]: "Media liability: defamation, copyright, or content-related claims."
+            - listitem [ref=e114]:
+              - generic [ref=e116]: "PCI fines and assessments: if you handle card payments."
+          - paragraph [ref=e117]: Sub-limits matter. A policy may say "up to £5 million", but specific events like social engineering fraud or ransomware extortion often have far smaller sub-limits inside that headline number. Read the schedule, not just the headline.
+          - heading "What it does not cover" [level=2] [ref=e118]
+          - paragraph [ref=e119]: "Common exclusions in 2026 policies:"
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - generic [ref=e123]:
+                - strong [ref=e124]: Nation-state attacks.
+                - text: Most policies now exclude attacks attributable to a state actor under "war exclusion" clauses. The definition of "attributable" varies sharply.
+            - listitem [ref=e125]:
+              - generic [ref=e127]:
+                - strong [ref=e128]: Prior-known incidents.
+                - text: Anything you knew about before the policy started is excluded. This includes incidents disclosed at renewal, ongoing investigations, and known vulnerabilities you had not patched.
+            - listitem [ref=e129]:
+              - generic [ref=e131]:
+                - strong [ref=e132]: Unpatched or unsupported systems.
+                - text: Many policies exclude losses from systems running known unpatched critical vulnerabilities or end-of-life software.
+            - listitem [ref=e133]:
+              - generic [ref=e135]:
+                - strong [ref=e136]: Missing controls.
+                - text: If you stated on your application that you had MFA on all admin accounts and the breach used a non-MFA admin account, the claim is likely to be reduced or denied.
+            - listitem [ref=e137]:
+              - generic [ref=e139]:
+                - strong [ref=e140]: Social engineering of payments.
+                - text: Often covered with a sub-limit far lower than the headline. Some policies exclude it entirely above a stated amount.
+            - listitem [ref=e141]:
+              - generic [ref=e143]:
+                - strong [ref=e144]: Property damage and bodily injury.
+                - text: Cyber-physical events that cause physical harm typically fall outside cyber and into separate property or general liability cover.
+          - paragraph [ref=e145]: The category that catches most SMBs is the controls one. Policies rely on the answers in your proposal form. If those answers turn out to be wrong on the day of the breach, the cover is contingent.
+          - heading "What controls insurers expect before they pay out" [level=2] [ref=e146]
+          - paragraph [ref=e147]: "The minimum control set asked for at SMB renewal in 2026 typically includes:"
+          - list [ref=e148]:
+            - listitem [ref=e149]:
+              - generic [ref=e151]: MFA on all email accounts, all administrative accounts, and all remote access.
+            - listitem [ref=e152]:
+              - generic [ref=e154]: EDR (Endpoint Detection and Response) on every laptop and server.
+            - listitem [ref=e155]:
+              - generic [ref=e157]: Regular off-site or immutable backups, tested at least annually.
+            - listitem [ref=e158]:
+              - generic [ref=e160]: Patching cadence on internet-facing systems within a defined window, usually 14 to 30 days for critical vulnerabilities.
+            - listitem [ref=e161]:
+              - generic [ref=e163]: Email security filtering on inbound mail.
+            - listitem [ref=e164]:
+              - generic [ref=e166]: Documented incident response plan, with named roles.
+            - listitem [ref=e167]:
+              - generic [ref=e169]: Security awareness training for all staff, with phishing simulation results.
+          - paragraph [ref=e170]: "Larger or higher-risk SMBs often face additional asks:"
+          - list [ref=e171]:
+            - listitem [ref=e172]:
+              - generic [ref=e174]: 24/7 monitoring or managed detection capability.
+            - listitem [ref=e175]:
+              - generic [ref=e177]: Privileged access management for administrative accounts.
+            - listitem [ref=e178]:
+              - generic [ref=e180]: Network segmentation between corporate and operational systems.
+            - listitem [ref=e181]:
+              - generic [ref=e183]: Documented vendor risk management.
+          - paragraph [ref=e184]: Insurers verify these at proposal stage. They re-verify them after a breach. The mismatch between the two is where most denied claims live.
+          - heading "How a claim actually plays out" [level=2] [ref=e185]
+          - paragraph [ref=e186]: "A typical cyber claim runs through six stages:"
+          - list [ref=e187]:
+            - listitem [ref=e188]:
+              - strong [ref=e189]: Notification.
+              - text: You call the insurer's incident hotline as soon as you suspect a breach. Most policies require notification within 72 hours of discovery.
+            - listitem [ref=e190]:
+              - strong [ref=e191]: Panel response.
+              - text: The insurer dispatches a panel forensic firm and a panel law firm. Using your own preferred firms usually requires prior approval and may not be reimbursed.
+            - listitem [ref=e192]:
+              - strong [ref=e193]: Forensic investigation.
+              - text: The panel firm reconstructs what happened, when, and how. Their report becomes the central document for the claim.
+            - listitem [ref=e194]:
+              - strong [ref=e195]: Coverage determination.
+              - text: The insurer compares the forensic findings to your policy terms and your proposal form answers.
+            - listitem [ref=e196]:
+              - strong [ref=e197]: Negotiation.
+              - text: If there is a gap (a control claimed but not in place, an excluded cause), the insurer typically proposes a reduction. You either accept, negotiate, or dispute.
+            - listitem [ref=e198]:
+              - strong [ref=e199]: Settlement.
+              - text: Once agreed, payments cover the eligible losses up to the policy limit, less your retention (the cyber equivalent of an excess).
+          - paragraph [ref=e200]: The bottleneck is almost always stage 4. The policy summary is irrelevant by then. What decides the payout is the forensic evidence and the proposal form.
+          - heading "Common reasons claims are denied or reduced" [level=2] [ref=e201]
+          - paragraph [ref=e202]: "Insurers in the UK and Europe report a consistent set of reasons:"
+          - list [ref=e203]:
+            - listitem [ref=e204]:
+              - generic [ref=e206]: The breach used an account without MFA, when the proposal form said all accounts had MFA.
+            - listitem [ref=e207]:
+              - generic [ref=e209]: The compromised system was missing a critical patch released months earlier.
+            - listitem [ref=e210]:
+              - generic [ref=e212]: Backups existed but had not been tested. Restoration failed. The business interruption claim then included costs the insurer would not have incurred had backups worked.
+            - listitem [ref=e213]:
+              - generic [ref=e215]: The incident was social engineering of a payment above the sub-limit.
+            - listitem [ref=e216]:
+              - generic [ref=e218]: The cause was attributed to a state actor under the war exclusion.
+            - listitem [ref=e219]:
+              - generic [ref=e221]: The business notified late, beyond the policy's reporting window.
+          - paragraph [ref=e222]: "Most denials are not about misbehaviour. They are about control drift: things were in place at renewal, drifted out of compliance over the next 12 months, and the gap was discovered by the forensic team after the breach."
+          - heading "How to lower your premium" [level=2] [ref=e223]
+          - paragraph [ref=e224]: Premium reductions in 2026 reliably come from three places.
+          - paragraph [ref=e225]:
+            - strong [ref=e226]: Demonstrable controls.
+            - text: A clean evidence pack at renewal, screenshots of MFA enforcement, EDR coverage reports, backup test logs, will move the needle further than any pitch.
+          - paragraph [ref=e227]:
+            - strong [ref=e228]: 24/7 detection capability.
+            - text: Adding managed detection or a managed SOC service often produces a 10% to 25% premium reduction, because it materially shortens incident dwell time.
+          - paragraph [ref=e229]:
+            - strong [ref=e230]: Higher retentions.
+            - text: Taking a larger share of the first-pound risk reduces the premium. Only sensible if the higher retention is genuinely affordable in cash.
+          - paragraph [ref=e231]: "What does not reliably reduce premiums: certifications without operational evidence, broad cyber awareness programmes without measured outcomes, and \"we use a major cloud provider\" claims."
+          - heading "Our take" [level=2] [ref=e232]
+          - paragraph [ref=e233]: Most cyber insurance pages explain what the policy covers in theory. The useful framing is what the policy does in practice, which is to pay out only when your controls were where you said they were on the day of the breach. Treat insurance as a financial backstop sitting behind a working control set, not as a substitute for one.
+          - paragraph [ref=e234]: "The most common mistake we see is the renewal cycle. Controls listed on the proposal form drift over 12 months: a new admin account without MFA, an unpatched system, a backup that has not been tested. The premium goes through. The cover looks fine. Then the breach lands, the forensic team finds the gap, and the payout shrinks. The policy did exactly what it said it would. It was the operational reality that quietly diverged."
+          - paragraph [ref=e235]: "Insurance is worth buying. It is also worth treating as a forcing function: every year, reproduce the evidence behind every answer on the proposal form, and fix anything that has slipped before you sign."
+          - heading "Where to go from here" [level=2] [ref=e236]
+          - paragraph [ref=e237]: "Treat your cyber insurance renewal as a controls audit, not a paperwork task. Pull the proposal form from last year. For every \"yes\" answer, find the evidence: the screenshot, the export, the test result. Fix any answer you can no longer evidence before you sign this year's form. That single change closes most of the practical gap between buying cover and actually being covered."
+          - paragraph [ref=e238]: If you are buying cyber insurance for the first time, do not start with the broker. Start with your control set. Bring evidence to the conversation. The premium you are quoted, and the cover you actually receive, both improve sharply when the insurer can see the controls before they have to imagine them.
+        - generic [ref=e239]:
+          - heading "Frequently Asked Questions" [level=2] [ref=e241]
+          - generic [ref=e242]:
+            - button "What does cyber insurance for businesses actually cover?" [ref=e244]:
+              - generic [ref=e245]: What does cyber insurance for businesses actually cover?
+              - img [ref=e247]
+            - button "What does cyber insurance not cover?" [ref=e250]:
+              - generic [ref=e251]: What does cyber insurance not cover?
+              - img [ref=e253]
+            - button "How much does cyber insurance cost for an SMB in 2026?" [ref=e256]:
+              - generic [ref=e257]: How much does cyber insurance cost for an SMB in 2026?
+              - img [ref=e259]
+            - button "Why are cyber insurance claims denied?" [ref=e262]:
+              - generic [ref=e263]: Why are cyber insurance claims denied?
+              - img [ref=e265]
+        - generic [ref=e267]:
+          - paragraph [ref=e268]: About the author
+          - generic [ref=e269]:
+            - img "Emma Chen" [ref=e271]
+            - generic [ref=e272]:
+              - heading "Emma Chen" [level=4] [ref=e274]
+              - paragraph [ref=e275]: Writer, thinker, and maker of things. I write about design, creativity, and the craft of building for the web.
+              - generic [ref=e276]:
+                - link "@emmachen" [ref=e277] [cursor=pointer]:
+                  - /url: https://twitter.com/emmachen
+                  - img [ref=e278]
+                  - text: "@emmachen"
+                - link "Website" [ref=e280] [cursor=pointer]:
+                  - /url: https://emmachen.com
+                  - img [ref=e281]
+                  - text: Website
+      - complementary [ref=e284]:
+        - generic [ref=e285]:
+          - navigation [ref=e286]:
+            - button "Table of Contents" [ref=e287]:
+              - generic [ref=e288]: Table of Contents
+              - img [ref=e289]
+            - list [ref=e293]:
+              - listitem [ref=e294]:
+                - link "Why this matters" [ref=e295] [cursor=pointer]:
+                  - /url: "#why-this-matters"
+              - listitem [ref=e296]:
+                - link "What cyber insurance for businesses actually covers" [ref=e297] [cursor=pointer]:
+                  - /url: "#what-cyber-insurance-for-businesses-actually-covers"
+              - listitem [ref=e298]:
+                - link "What it does not cover" [ref=e299] [cursor=pointer]:
+                  - /url: "#what-it-does-not-cover"
+              - listitem [ref=e300]:
+                - link "What controls insurers expect before they pay out" [ref=e301] [cursor=pointer]:
+                  - /url: "#what-controls-insurers-expect-before-they-pay-out"
+              - listitem [ref=e302]:
+                - link "How a claim actually plays out" [ref=e303] [cursor=pointer]:
+                  - /url: "#how-a-claim-actually-plays-out"
+              - listitem [ref=e304]:
+                - link "Common reasons claims are denied or reduced" [ref=e305] [cursor=pointer]:
+                  - /url: "#common-reasons-claims-are-denied-or-reduced"
+              - listitem [ref=e306]:
+                - link "How to lower your premium" [ref=e307] [cursor=pointer]:
+                  - /url: "#how-to-lower-your-premium"
+              - listitem [ref=e308]:
+                - link "Our take" [ref=e309] [cursor=pointer]:
+                  - /url: "#our-take"
+              - listitem [ref=e310]:
+                - link "Where to go from here" [ref=e311] [cursor=pointer]:
+                  - /url: "#where-to-go-from-here"
+          - generic [ref=e312]:
+            - paragraph [ref=e313]: Free weekly guides
+            - paragraph [ref=e314]: One practical cybersecurity guide per week. No jargon, no scare tactics.
+            - link "Subscribe free" [ref=e315] [cursor=pointer]:
+              - /url: /#newsletter
+          - generic [ref=e316]:
+            - paragraph [ref=e318]: Related Guides
+            - generic [ref=e319]:
+              - 'link "White label SOC for MSPs: what it is and why you need it 3 min read" [ref=e320] [cursor=pointer]':
+                - /url: /blog/white-label-soc-for-msps
+                - generic [ref=e321]:
+                  - paragraph [ref=e322]: "White label SOC for MSPs: what it is and why you need it"
+                  - paragraph [ref=e323]: 3 min read
+              - link "What is managed XDR? A plain-English guide for IT managers 3 min read" [ref=e324] [cursor=pointer]:
+                - /url: /blog/what-is-managed-xdr
+                - generic [ref=e325]:
+                  - paragraph [ref=e326]: What is managed XDR? A plain-English guide for IT managers
+                  - paragraph [ref=e327]: 3 min read
+              - 'link "SOC vs MDR vs XDR: which does your business actually need? 3 min read" [ref=e328] [cursor=pointer]':
+                - /url: /blog/soc-vs-mdr-vs-xdr
+                - generic [ref=e329]:
+                  - paragraph [ref=e330]: "SOC vs MDR vs XDR: which does your business actually need?"
+                  - paragraph [ref=e331]: 3 min read
+  - contentinfo [ref=e332]:
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - paragraph [ref=e336]: Free weekly guides
+        - heading "Cybersecurity made simple for your team." [level=2] [ref=e337]:
+          - text: Cybersecurity made
+          - text: simple for your team.
+      - generic [ref=e338]:
+        - paragraph [ref=e339]: One practical guide per week. No jargon, no scare tactics. Unsubscribe anytime.
+        - generic [ref=e340]:
+          - textbox "Work email address" [ref=e341]
+          - button "Subscribe" [ref=e342]
+        - paragraph [ref=e343]: No spam. No upsells. Just useful security content.
+    - generic [ref=e347]:
+      - generic [ref=e348]:
+        - generic [ref=e349]:
+          - img [ref=e351]
+          - generic [ref=e354]: CyberSubmarine
+        - paragraph [ref=e355]: Practical cybersecurity for small business — without the jargon or the consultant fee.
+      - generic [ref=e356]:
+        - heading "Navigate" [level=3] [ref=e357]
+        - list [ref=e358]:
+          - listitem [ref=e359]:
+            - link "All Guides" [ref=e360] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e361]:
+            - link "Topics" [ref=e362] [cursor=pointer]:
+              - /url: /categories
+          - listitem [ref=e363]:
+            - link "About" [ref=e364] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e365]:
+            - link "Contact" [ref=e366] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e367]:
+        - heading "Topics" [level=3] [ref=e368]
+        - list [ref=e369]:
+          - listitem [ref=e370]:
+            - link "SOC & Monitoring" [ref=e371] [cursor=pointer]:
+              - /url: /categories/soc-monitoring
+          - listitem [ref=e372]:
+            - link "Microsoft 365 Security" [ref=e373] [cursor=pointer]:
+              - /url: /categories/microsoft-365
+          - listitem [ref=e374]:
+            - link "Managed Security" [ref=e375] [cursor=pointer]:
+              - /url: /categories/managed-security
+          - listitem [ref=e376]:
+            - link "Compliance" [ref=e377] [cursor=pointer]:
+              - /url: /categories/compliance
+          - listitem [ref=e378]:
+            - link "Incident Response" [ref=e379] [cursor=pointer]:
+              - /url: /categories/incident-response
+          - listitem [ref=e380]:
+            - link "Tool Comparisons" [ref=e381] [cursor=pointer]:
+              - /url: /categories/tool-comparisons
+      - generic [ref=e382]:
+        - heading "Legal" [level=3] [ref=e383]
+        - list [ref=e384]:
+          - listitem [ref=e385]:
+            - link "Privacy Policy" [ref=e386] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e387]:
+            - link "Terms of Use" [ref=e388] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e389]:
+            - link "Disclosure" [ref=e390] [cursor=pointer]:
+              - /url: "#"
+        - paragraph [ref=e392]: CyberSubmarine may earn affiliate revenue from some tool links. We only recommend tools we'd use ourselves.
+    - generic [ref=e396]:
+      - paragraph [ref=e397]: © 2026 CyberSubmarine. All rights reserved.
+      - paragraph [ref=e398]: Plain-English security guides for the teams that need them most.
+  - alert [ref=e399]

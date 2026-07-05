@@ -1,0 +1,407 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "CyberSubmarine" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: CyberSubmarine
+      - generic [ref=e11]:
+        - link "Guides" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+          - text: Guides
+        - link "Topics" [ref=e13] [cursor=pointer]:
+          - /url: /categories
+          - text: Topics
+      - link "Get free guides" [ref=e15] [cursor=pointer]:
+        - /url: /#newsletter
+  - main [ref=e16]:
+    - generic [ref=e19]:
+      - generic [ref=e23]: For SMBs & IT teams
+      - heading "Cybersecurity Guides for Small Business — Without the Jargon." [level=1] [ref=e24]:
+        - generic [ref=e25]: Cybersecurity Guides
+        - generic [ref=e26]: for Small Business —
+        - generic [ref=e27]: Without the Jargon.
+      - paragraph [ref=e28]: Practical, plain-English security guides written for the teams running Microsoft 365, managing compliance, and making real decisions without a full security department.
+      - generic [ref=e29]:
+        - link "Browse the guides" [ref=e30] [cursor=pointer]:
+          - /url: /blog
+          - text: Browse the guides
+          - img [ref=e31]
+        - link "Start here" [ref=e33] [cursor=pointer]:
+          - /url: /#start-here
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: Trusted by IT teams at
+        - generic [ref=e36]:
+          - generic [ref=e37]: Law firms
+          - generic [ref=e38]: Accountancy practices
+          - generic [ref=e39]: Healthcare clinics
+          - generic [ref=e40]: Financial advisers
+          - generic [ref=e41]: Managed service providers
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Who this is for
+        - heading "Built for the people running security without a CISO." [level=2] [ref=e46]:
+          - text: Built for the people
+          - text: running security without a CISO.
+        - paragraph [ref=e47]: Most security content is written for enterprise teams with dedicated analysts. This isn't. It's for the rest of us.
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e51]
+          - heading "IT Managers & MSPs" [level=3] [ref=e54]
+          - paragraph [ref=e55]: You're the one-person security team for 50–500 users. You need clear answers, not another 300-page framework.
+          - generic [ref=e56]:
+            - generic [ref=e57]: SOC setup
+            - generic [ref=e58]: M365 hardening
+            - generic [ref=e59]: Vendor selection
+        - generic [ref=e60]:
+          - img [ref=e62]
+          - heading "Small Business Owners" [level=3] [ref=e65]
+          - paragraph [ref=e66]: Security isn't your job, but a breach would be your problem. These guides help you ask the right questions and make smarter decisions.
+          - generic [ref=e67]:
+            - generic [ref=e68]: Compliance basics
+            - generic [ref=e69]: Cyber insurance
+            - generic [ref=e70]: Incident response
+        - generic [ref=e71]:
+          - img [ref=e73]
+          - heading "Compliance Leads" [level=3] [ref=e76]
+          - paragraph [ref=e77]: Chasing SOC 2, ISO 27001, or Cyber Essentials? We break down what each framework actually requires — and what you can skip.
+          - generic [ref=e78]:
+            - generic [ref=e79]: SOC 2
+            - generic [ref=e80]: ISO 27001
+            - generic [ref=e81]: Cyber Essentials
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: Topic areas
+          - 'heading "Six areas. One goal: keep your business protected." [level=2] [ref=e87]':
+            - text: "Six areas. One goal: keep"
+            - text: your business protected.
+        - link "View all topics" [ref=e88] [cursor=pointer]:
+          - /url: /categories
+          - text: View all topics
+          - img [ref=e89]
+      - generic [ref=e91]:
+        - link "SOC & Monitoring 12 guides Set up threat detection, respond to alerts, and build a monitoring stack that doesn't require a full team. Browse guides" [ref=e92] [cursor=pointer]:
+          - /url: /categories/soc-monitoring
+          - img [ref=e95]
+          - generic [ref=e97]:
+            - heading "SOC & Monitoring" [level=3] [ref=e98]
+            - generic [ref=e99]: 12 guides
+          - paragraph [ref=e100]: Set up threat detection, respond to alerts, and build a monitoring stack that doesn't require a full team.
+          - generic [ref=e101]:
+            - text: Browse guides
+            - img [ref=e102]
+        - link "Microsoft 365 Security 14 guides Lock down email, SharePoint, and Teams. Configure Defender, Conditional Access, and MFA the right way. Browse guides" [ref=e104] [cursor=pointer]:
+          - /url: /categories/microsoft-365
+          - img [ref=e107]
+          - generic [ref=e112]:
+            - heading "Microsoft 365 Security" [level=3] [ref=e113]
+            - generic [ref=e114]: 14 guides
+          - paragraph [ref=e115]: Lock down email, SharePoint, and Teams. Configure Defender, Conditional Access, and MFA the right way.
+          - generic [ref=e116]:
+            - text: Browse guides
+            - img [ref=e117]
+        - link "Managed Security 8 guides Everything you need to know before signing with an MSSP or MDR provider — questions to ask, red flags to spot. Browse guides" [ref=e119] [cursor=pointer]:
+          - /url: /categories/managed-security
+          - img [ref=e122]
+          - generic [ref=e124]:
+            - heading "Managed Security" [level=3] [ref=e125]
+            - generic [ref=e126]: 8 guides
+          - paragraph [ref=e127]: Everything you need to know before signing with an MSSP or MDR provider — questions to ask, red flags to spot.
+          - generic [ref=e128]:
+            - text: Browse guides
+            - img [ref=e129]
+        - link "Compliance & Certification 10 guides SOC 2, ISO 27001, Cyber Essentials — broken down into what you actually need to do, not what sounds impressive. Browse guides" [ref=e131] [cursor=pointer]:
+          - /url: /categories/compliance
+          - img [ref=e134]
+          - generic [ref=e137]:
+            - heading "Compliance & Certification" [level=3] [ref=e138]
+            - generic [ref=e139]: 10 guides
+          - paragraph [ref=e140]: SOC 2, ISO 27001, Cyber Essentials — broken down into what you actually need to do, not what sounds impressive.
+          - generic [ref=e141]:
+            - text: Browse guides
+            - img [ref=e142]
+        - link "Incident Response 7 guides Build an incident response plan before you need one. Know exactly what to do when ransomware hits or data leaks. Browse guides" [ref=e144] [cursor=pointer]:
+          - /url: /categories/incident-response
+          - img [ref=e147]
+          - generic [ref=e149]:
+            - heading "Incident Response" [level=3] [ref=e150]
+            - generic [ref=e151]: 7 guides
+          - paragraph [ref=e152]: Build an incident response plan before you need one. Know exactly what to do when ransomware hits or data leaks.
+          - generic [ref=e153]:
+            - text: Browse guides
+            - img [ref=e154]
+        - link "Tool Comparisons 9 guides Honest head-to-head reviews of EDR, SIEM, password managers, and more — written for SMB budgets and requirements. Browse guides" [ref=e156] [cursor=pointer]:
+          - /url: /categories/tool-comparisons
+          - img [ref=e159]
+          - generic [ref=e160]:
+            - heading "Tool Comparisons" [level=3] [ref=e161]
+            - generic [ref=e162]: 9 guides
+          - paragraph [ref=e163]: Honest head-to-head reviews of EDR, SIEM, password managers, and more — written for SMB budgets and requirements.
+          - generic [ref=e164]:
+            - text: Browse guides
+            - img [ref=e165]
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - paragraph [ref=e171]: Start here
+          - heading "New to CyberSubmarine? Read these first." [level=2] [ref=e172]:
+            - text: New to CyberSubmarine?
+            - text: Read these first.
+        - link "All guides" [ref=e173] [cursor=pointer]:
+          - /url: /blog
+          - text: All guides
+          - img [ref=e174]
+      - generic [ref=e176]:
+        - link "SOC & Monitoring 3 min read What does 24/7 SOC monitoring actually do for your business? 24/7 SOC monitoring is more than alerts and dashboards. Here is what it actually does, what it costs in 2026, and when an SMB genuinely needs it. Read guide" [ref=e177] [cursor=pointer]:
+          - /url: /blog/what-does-247-soc-monitoring-actually-do
+          - generic [ref=e178]:
+            - generic [ref=e179]:
+              - generic [ref=e180]: SOC & Monitoring
+              - generic [ref=e181]: 3 min read
+            - heading "What does 24/7 SOC monitoring actually do for your business?" [level=3] [ref=e182]
+            - paragraph [ref=e183]: 24/7 SOC monitoring is more than alerts and dashboards. Here is what it actually does, what it costs in 2026, and when an SMB genuinely needs it.
+            - generic [ref=e184]:
+              - text: Read guide
+              - img [ref=e185]
+        - 'link "design 3 min read The Art of Less: Why Minimalism Wins in Design Every element on your page is a decision. The best designers know that what you leave out matters more than what you put in. Read guide" [ref=e187] [cursor=pointer]':
+          - /url: /blog/the-art-of-less
+          - generic [ref=e188]:
+            - generic [ref=e189]:
+              - generic [ref=e190]: design
+              - generic [ref=e191]: 3 min read
+            - 'heading "The Art of Less: Why Minimalism Wins in Design" [level=3] [ref=e192]'
+            - paragraph [ref=e193]: Every element on your page is a decision. The best designers know that what you leave out matters more than what you put in.
+            - generic [ref=e194]:
+              - text: Read guide
+              - img [ref=e195]
+        - 'link "writing 3 min read Writing for the Web: A Guide for Humans Online readers don''t read — they scan. Here''s how to write content that respects their time while still saying something meaningful. Read guide" [ref=e197] [cursor=pointer]':
+          - /url: /blog/writing-for-the-web
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e200]: writing
+              - generic [ref=e201]: 3 min read
+            - 'heading "Writing for the Web: A Guide for Humans" [level=3] [ref=e202]'
+            - paragraph [ref=e203]: Online readers don't read — they scan. Here's how to write content that respects their time while still saying something meaningful.
+            - generic [ref=e204]:
+              - text: Read guide
+              - img [ref=e205]
+        - link "development 3 min read Why Next.js Changed How I Think About the Web After years of building websites, Next.js shifted my mental model. Here's what I learned and why it matters for every developer. Read guide" [ref=e207] [cursor=pointer]:
+          - /url: /blog/building-with-nextjs
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e210]: development
+              - generic [ref=e211]: 3 min read
+            - heading "Why Next.js Changed How I Think About the Web" [level=3] [ref=e212]
+            - paragraph [ref=e213]: After years of building websites, Next.js shifted my mental model. Here's what I learned and why it matters for every developer.
+            - generic [ref=e214]:
+              - text: Read guide
+              - img [ref=e215]
+        - link "Managed Security 3 min read Best managed XDR providers for Microsoft 365 SMBs in 2026 Six managed XDR providers for Microsoft 365 SMBs in 2026, compared on operating model, response authority, and exit cost. Microsoft-native and vendor-stack options reviewed. Read guide" [ref=e217] [cursor=pointer]:
+          - /url: /blog/best-managed-xdr-microsoft-365-smbs-2026
+          - generic [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: Managed Security
+              - generic [ref=e221]: 3 min read
+            - heading "Best managed XDR providers for Microsoft 365 SMBs in 2026" [level=3] [ref=e222]
+            - paragraph [ref=e223]: Six managed XDR providers for Microsoft 365 SMBs in 2026, compared on operating model, response authority, and exit cost. Microsoft-native and vendor-stack options reviewed.
+            - generic [ref=e224]:
+              - text: Read guide
+              - img [ref=e225]
+        - link "SOC & Monitoring 3 min read What cyber insurance actually covers (and what it doesn't) Cyber insurance for businesses sounds simple but policies have sharp edges. Here is what cover includes, what it excludes, and how a claim actually lands. Read guide" [ref=e227] [cursor=pointer]:
+          - /url: /blog/what-cyber-insurance-actually-covers
+          - generic [ref=e228]:
+            - generic [ref=e229]:
+              - generic [ref=e230]: SOC & Monitoring
+              - generic [ref=e231]: 3 min read
+            - heading "What cyber insurance actually covers (and what it doesn't)" [level=3] [ref=e232]
+            - paragraph [ref=e233]: Cyber insurance for businesses sounds simple but policies have sharp edges. Here is what cover includes, what it excludes, and how a claim actually lands.
+            - generic [ref=e234]:
+              - text: Read guide
+              - img [ref=e235]
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - paragraph [ref=e241]: Latest
+          - heading "Recent guides" [level=2] [ref=e242]
+        - link "All guides" [ref=e243] [cursor=pointer]:
+          - /url: /blog
+          - text: All guides
+          - img [ref=e244]
+      - generic [ref=e246]:
+        - link "Best managed XDR providers for Microsoft 365 SMBs in 2026 Managed Security 3 min Best managed XDR providers for Microsoft 365 SMBs in 2026 Six managed XDR providers for Microsoft 365 SMBs in 2026, compared on operating model, response authority, and exit cost. Microsoft-native and vendor-stack options reviewed. Read guide" [ref=e247] [cursor=pointer]:
+          - /url: /blog/best-managed-xdr-microsoft-365-smbs-2026
+          - img "Best managed XDR providers for Microsoft 365 SMBs in 2026" [ref=e249]
+          - generic [ref=e250]:
+            - generic [ref=e251]:
+              - generic [ref=e252]: Managed Security
+              - generic [ref=e253]: 3 min
+            - heading "Best managed XDR providers for Microsoft 365 SMBs in 2026" [level=3] [ref=e254]
+            - paragraph [ref=e255]: Six managed XDR providers for Microsoft 365 SMBs in 2026, compared on operating model, response authority, and exit cost. Microsoft-native and vendor-stack options reviewed.
+            - generic [ref=e256]:
+              - text: Read guide
+              - img [ref=e257]
+        - link "What cyber insurance actually covers (and what it doesn't) SOC & Monitoring 3 min What cyber insurance actually covers (and what it doesn't) Cyber insurance for businesses sounds simple but policies have sharp edges. Here is what cover includes, what it excludes, and how a claim actually lands. Read guide" [ref=e259] [cursor=pointer]:
+          - /url: /blog/what-cyber-insurance-actually-covers
+          - img "What cyber insurance actually covers (and what it doesn't)" [ref=e261]
+          - generic [ref=e262]:
+            - generic [ref=e263]:
+              - generic [ref=e264]: SOC & Monitoring
+              - generic [ref=e265]: 3 min
+            - heading "What cyber insurance actually covers (and what it doesn't)" [level=3] [ref=e266]
+            - paragraph [ref=e267]: Cyber insurance for businesses sounds simple but policies have sharp edges. Here is what cover includes, what it excludes, and how a claim actually lands.
+            - generic [ref=e268]:
+              - text: Read guide
+              - img [ref=e269]
+        - 'link "White label SOC for MSPs: what it is and why you need it SOC & Monitoring 3 min White label SOC for MSPs: what it is and why you need it White label SOC for MSPs lets you sell 24/7 security under your brand without building a SOC. Here is how it works, what to look for, and how to choose. Read guide" [ref=e271] [cursor=pointer]':
+          - /url: /blog/white-label-soc-for-msps
+          - 'img "White label SOC for MSPs: what it is and why you need it" [ref=e273]'
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - generic [ref=e276]: SOC & Monitoring
+              - generic [ref=e277]: 3 min
+            - 'heading "White label SOC for MSPs: what it is and why you need it" [level=3] [ref=e278]'
+            - paragraph [ref=e279]: White label SOC for MSPs lets you sell 24/7 security under your brand without building a SOC. Here is how it works, what to look for, and how to choose.
+            - generic [ref=e280]:
+              - text: Read guide
+              - img [ref=e281]
+        - link "What is managed XDR? A plain-English guide for IT managers SOC & Monitoring 3 min What is managed XDR? A plain-English guide for IT managers Managed XDR services bundle a detection platform with a vendor's analysts. Here is what they include, what they don't, and how to choose one in 2026. Read guide" [ref=e283] [cursor=pointer]:
+          - /url: /blog/what-is-managed-xdr
+          - img "What is managed XDR? A plain-English guide for IT managers" [ref=e285]
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - generic [ref=e288]: SOC & Monitoring
+              - generic [ref=e289]: 3 min
+            - heading "What is managed XDR? A plain-English guide for IT managers" [level=3] [ref=e290]
+            - paragraph [ref=e291]: Managed XDR services bundle a detection platform with a vendor's analysts. Here is what they include, what they don't, and how to choose one in 2026.
+            - generic [ref=e292]:
+              - text: Read guide
+              - img [ref=e293]
+        - 'link "SOC vs MDR vs XDR: which does your business actually need? SOC & Monitoring 3 min SOC vs MDR vs XDR: which does your business actually need? SOC vs XDR is the wrong question on its own. Here is how SOC, MDR, and XDR actually differ, where they overlap, and how to choose for an SMB in 2026. Read guide" [ref=e295] [cursor=pointer]':
+          - /url: /blog/soc-vs-mdr-vs-xdr
+          - 'img "SOC vs MDR vs XDR: which does your business actually need?" [ref=e297]'
+          - generic [ref=e298]:
+            - generic [ref=e299]:
+              - generic [ref=e300]: SOC & Monitoring
+              - generic [ref=e301]: 3 min
+            - 'heading "SOC vs MDR vs XDR: which does your business actually need?" [level=3] [ref=e302]'
+            - paragraph [ref=e303]: SOC vs XDR is the wrong question on its own. Here is how SOC, MDR, and XDR actually differ, where they overlap, and how to choose for an SMB in 2026.
+            - generic [ref=e304]:
+              - text: Read guide
+              - img [ref=e305]
+        - link "What does 24/7 SOC monitoring actually do for your business? SOC & Monitoring 3 min What does 24/7 SOC monitoring actually do for your business? 24/7 SOC monitoring is more than alerts and dashboards. Here is what it actually does, what it costs in 2026, and when an SMB genuinely needs it. Read guide" [ref=e307] [cursor=pointer]:
+          - /url: /blog/what-does-247-soc-monitoring-actually-do
+          - img "What does 24/7 SOC monitoring actually do for your business?" [ref=e309]
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - generic [ref=e312]: SOC & Monitoring
+              - generic [ref=e313]: 3 min
+            - heading "What does 24/7 SOC monitoring actually do for your business?" [level=3] [ref=e314]
+            - paragraph [ref=e315]: 24/7 SOC monitoring is more than alerts and dashboards. Here is what it actually does, what it costs in 2026, and when an SMB genuinely needs it.
+            - generic [ref=e316]:
+              - text: Read guide
+              - img [ref=e317]
+    - generic [ref=e320]:
+      - generic [ref=e321]:
+        - generic [ref=e322]:
+          - generic [ref=e323]: 60+
+          - generic [ref=e324]: Guides published
+          - paragraph [ref=e325]: Covering every major threat vector facing SMBs today.
+        - generic [ref=e326]:
+          - generic [ref=e327]: No ads
+          - generic [ref=e328]: Ever
+          - paragraph [ref=e329]: We don't sell ads. Revenue comes from transparent affiliate links and optional consulting.
+        - generic [ref=e330]:
+          - generic [ref=e331]: Plain English
+          - generic [ref=e332]: Always
+          - paragraph [ref=e333]: If a concept needs a dictionary to understand, we haven't explained it properly yet.
+        - generic [ref=e334]:
+          - generic [ref=e335]: Vendor-neutral
+          - generic [ref=e336]: By design
+          - paragraph [ref=e337]: When we recommend a tool, we tell you why — and what the alternatives are.
+      - generic [ref=e338]:
+        - generic [ref=e339]:
+          - paragraph [ref=e340]: Our approach
+          - heading "How we decide what to publish." [level=2] [ref=e341]
+        - generic [ref=e342]:
+          - generic [ref=e343]:
+            - img [ref=e345]
+            - generic [ref=e348]:
+              - heading "Practical over theoretical" [level=3] [ref=e349]
+              - paragraph [ref=e350]: Every guide ends with a checklist or next step. No filler, no padding.
+          - generic [ref=e351]:
+            - img [ref=e353]
+            - generic [ref=e356]:
+              - heading "Updated when things change" [level=3] [ref=e357]
+              - paragraph [ref=e358]: We flag outdated content and update guides when tools or regulations change.
+          - generic [ref=e359]:
+            - img [ref=e361]
+            - generic [ref=e363]:
+              - heading "Written by practitioners" [level=3] [ref=e364]
+              - paragraph [ref=e365]: Our authors have run IT at SMBs. They know the constraints, the budget pressure, the 2am pages.
+  - contentinfo [ref=e366]:
+    - generic [ref=e368]:
+      - generic [ref=e369]:
+        - paragraph [ref=e370]: Free weekly guides
+        - heading "Cybersecurity made simple for your team." [level=2] [ref=e371]:
+          - text: Cybersecurity made
+          - text: simple for your team.
+      - generic [ref=e372]:
+        - paragraph [ref=e373]: One practical guide per week. No jargon, no scare tactics. Unsubscribe anytime.
+        - generic [ref=e374]:
+          - textbox "Work email address" [ref=e375]
+          - button "Subscribe" [ref=e376]
+        - paragraph [ref=e377]: No spam. No upsells. Just useful security content.
+    - generic [ref=e381]:
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - img [ref=e385]
+          - generic [ref=e388]: CyberSubmarine
+        - paragraph [ref=e389]: Practical cybersecurity for small business — without the jargon or the consultant fee.
+      - generic [ref=e390]:
+        - heading "Navigate" [level=3] [ref=e391]
+        - list [ref=e392]:
+          - listitem [ref=e393]:
+            - link "All Guides" [ref=e394] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e395]:
+            - link "Topics" [ref=e396] [cursor=pointer]:
+              - /url: /categories
+      - generic [ref=e397]:
+        - heading "Topics" [level=3] [ref=e398]
+        - list [ref=e399]:
+          - listitem [ref=e400]:
+            - link "SOC & Monitoring" [ref=e401] [cursor=pointer]:
+              - /url: /categories/soc-monitoring
+          - listitem [ref=e402]:
+            - link "Microsoft 365 Security" [ref=e403] [cursor=pointer]:
+              - /url: /categories/microsoft-365
+          - listitem [ref=e404]:
+            - link "Managed Security" [ref=e405] [cursor=pointer]:
+              - /url: /categories/managed-security
+          - listitem [ref=e406]:
+            - link "Compliance" [ref=e407] [cursor=pointer]:
+              - /url: /categories/compliance
+          - listitem [ref=e408]:
+            - link "Incident Response" [ref=e409] [cursor=pointer]:
+              - /url: /categories/incident-response
+          - listitem [ref=e410]:
+            - link "Tool Comparisons" [ref=e411] [cursor=pointer]:
+              - /url: /categories/tool-comparisons
+      - generic [ref=e412]:
+        - heading "Legal" [level=3] [ref=e413]
+        - list [ref=e414]:
+          - listitem [ref=e415]:
+            - link "Privacy Policy" [ref=e416] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e417]:
+            - link "Terms of Use" [ref=e418] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e419]:
+            - link "Disclosure" [ref=e420] [cursor=pointer]:
+              - /url: "#"
+        - paragraph [ref=e422]: CyberSubmarine may earn affiliate revenue from some tool links. We only recommend tools we'd use ourselves.
+    - generic [ref=e426]:
+      - paragraph [ref=e427]: © 2026 CyberSubmarine. All rights reserved.
+      - paragraph [ref=e428]: Plain-English security guides for the teams that need them most.
+  - alert [ref=e429]

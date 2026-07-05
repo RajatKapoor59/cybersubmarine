@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "CyberSubmarine" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: CyberSubmarine
+      - generic [ref=e11]:
+        - link "Guides" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+          - text: Guides
+        - link "Topics" [ref=e13] [cursor=pointer]:
+          - /url: /categories
+          - text: Topics
+      - link "Get free guides" [ref=e16] [cursor=pointer]:
+        - /url: /#newsletter
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "Creativity" [level=1] [ref=e22]
+        - paragraph [ref=e23]: On making things, finding inspiration, and the creative process.
+        - paragraph [ref=e24]: 1 article
+      - article [ref=e26]:
+        - link "Building a Creative Routine That Actually Works 3 min Building a Creative Routine That Actually Works Forget productivity hacks. The only system that works is one built around how your brain actually functions. April 5, 2026" [ref=e27] [cursor=pointer]:
+          - /url: /blog/creative-routine
+          - img "Building a Creative Routine That Actually Works" [ref=e29]
+          - generic [ref=e31]: 3 min
+          - heading "Building a Creative Routine That Actually Works" [level=3] [ref=e32]
+          - paragraph [ref=e33]: Forget productivity hacks. The only system that works is one built around how your brain actually functions.
+          - time [ref=e34]: April 5, 2026
+  - contentinfo [ref=e35]:
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - paragraph [ref=e39]: Free weekly guides
+        - heading "Cybersecurity made simple for your team." [level=2] [ref=e40]:
+          - text: Cybersecurity made
+          - text: simple for your team.
+      - generic [ref=e41]:
+        - paragraph [ref=e42]: One practical guide per week. No jargon, no scare tactics. Unsubscribe anytime.
+        - generic [ref=e43]:
+          - textbox "Work email address" [ref=e44]
+          - button "Subscribe" [ref=e45]
+        - paragraph [ref=e46]: No spam. No upsells. Just useful security content.
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - img [ref=e54]
+          - generic [ref=e57]: CyberSubmarine
+        - paragraph [ref=e58]: Practical cybersecurity for small business — without the jargon or the consultant fee.
+      - generic [ref=e59]:
+        - heading "Navigate" [level=3] [ref=e60]
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - link "All Guides" [ref=e63] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e64]:
+            - link "Topics" [ref=e65] [cursor=pointer]:
+              - /url: /categories
+      - generic [ref=e66]:
+        - heading "Topics" [level=3] [ref=e67]
+        - list [ref=e68]:
+          - listitem [ref=e69]:
+            - link "SOC & Monitoring" [ref=e70] [cursor=pointer]:
+              - /url: /categories/soc-monitoring
+          - listitem [ref=e71]:
+            - link "Microsoft 365 Security" [ref=e72] [cursor=pointer]:
+              - /url: /categories/microsoft-365
+          - listitem [ref=e73]:
+            - link "Managed Security" [ref=e74] [cursor=pointer]:
+              - /url: /categories/managed-security
+          - listitem [ref=e75]:
+            - link "Compliance" [ref=e76] [cursor=pointer]:
+              - /url: /categories/compliance
+          - listitem [ref=e77]:
+            - link "Incident Response" [ref=e78] [cursor=pointer]:
+              - /url: /categories/incident-response
+          - listitem [ref=e79]:
+            - link "Tool Comparisons" [ref=e80] [cursor=pointer]:
+              - /url: /categories/tool-comparisons
+      - generic [ref=e81]:
+        - heading "Legal" [level=3] [ref=e82]
+        - list [ref=e83]:
+          - listitem [ref=e84]:
+            - link "Privacy Policy" [ref=e85] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e86]:
+            - link "Terms of Use" [ref=e87] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e88]:
+            - link "Disclosure" [ref=e89] [cursor=pointer]:
+              - /url: "#"
+        - paragraph [ref=e91]: CyberSubmarine may earn affiliate revenue from some tool links. We only recommend tools we'd use ourselves.
+    - generic [ref=e95]:
+      - paragraph [ref=e96]: © 2026 CyberSubmarine. All rights reserved.
+      - paragraph [ref=e97]: Plain-English security guides for the teams that need them most.
+  - alert [ref=e98]
