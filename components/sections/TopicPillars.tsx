@@ -12,7 +12,6 @@ const pillars = [
     slug: "soc-monitoring",
     name: "SOC & Monitoring",
     count: "12 guides",
-    color: "#00B4D8",
     description: "Set up threat detection, respond to alerts, and build a monitoring stack that doesn't require a full team.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -24,7 +23,6 @@ const pillars = [
     slug: "microsoft-365",
     name: "Microsoft 365 Security",
     count: "14 guides",
-    color: "#0077A8",
     description: "Lock down email, SharePoint, and Teams. Configure Defender, Conditional Access, and MFA the right way.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -39,7 +37,6 @@ const pillars = [
     slug: "managed-security",
     name: "Managed Security",
     count: "8 guides",
-    color: "#005F73",
     description: "Everything you need to know before signing with an MSSP or MDR provider — questions to ask, red flags to spot.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -51,7 +48,6 @@ const pillars = [
     slug: "compliance",
     name: "Compliance & Certification",
     count: "10 guides",
-    color: "#2E8B57",
     description: "SOC 2, ISO 27001, Cyber Essentials — broken down into what you actually need to do, not what sounds impressive.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -64,7 +60,6 @@ const pillars = [
     slug: "incident-response",
     name: "Incident Response",
     count: "7 guides",
-    color: "#C9541A",
     description: "Build an incident response plan before you need one. Know exactly what to do when ransomware hits or data leaks.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -78,7 +73,6 @@ const pillars = [
     slug: "tool-comparisons",
     name: "Tool Comparisons",
     count: "9 guides",
-    color: "#7B5EA7",
     description: "Honest head-to-head reviews of EDR, SIEM, password managers, and more — written for SMB budgets and requirements.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -138,15 +132,9 @@ export function TopicPillars() {
             <Link
               key={p.slug}
               href={`/categories/${p.slug}`}
-              className="tp-card group block p-7 bg-[var(--card)] border border-[var(--border)] rounded-[12px] hover:border-[var(--accent)]/30 hover:shadow-md transition-all duration-300 relative overflow-hidden"
+              className="tp-card group block p-7 bg-[var(--card)] border border-[var(--border)] rounded-[12px] hover:border-[var(--fg)]/25 hover:shadow-md transition-all duration-300 relative overflow-hidden"
             >
-              {/* Color top strip */}
-              <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ backgroundColor: p.color }} />
-
-              <div
-                className="flex items-center justify-center w-11 h-11 rounded-[10px] mb-5 transition-transform duration-300 group-hover:scale-110"
-                style={{ backgroundColor: `${p.color}18`, color: p.color }}
-              >
+              <div className="flex items-center justify-center w-11 h-11 rounded-full bg-[var(--accent-soft)] text-[var(--accent-text)] mb-5 transition-transform duration-300 group-hover:scale-110">
                 {p.icon}
               </div>
 

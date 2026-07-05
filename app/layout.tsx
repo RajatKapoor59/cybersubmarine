@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Frank_Ruhl_Libre } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { AgentationProvider } from "@/components/AgentationProvider";
@@ -11,6 +11,13 @@ const GA_ID = "G-4HYJYNT2NE";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const frankRuhlLibre = Frank_Ruhl_Libre({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "700", "900"],
   display: "swap",
 });
 
@@ -61,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${frankRuhlLibre.variable}`}>
       <head>
         <link
           rel="alternate"

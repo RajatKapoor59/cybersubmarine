@@ -37,18 +37,18 @@ export function Footer() {
   };
 
   return (
-    <footer id="newsletter" className="bg-[var(--navy)] text-white">
+    <footer id="newsletter" className="bg-[var(--navy-deep)] text-white">
       {/* Newsletter section */}
       <div className="mx-auto max-w-[1280px] px-6 md:px-10 pt-20 pb-16 md:pt-28 md:pb-20">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-16">
           <div className="max-w-[520px]">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--teal)] mb-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--accent-on-dark)] mb-3">
               Free weekly guides
             </p>
-            <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">
+            <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">
               Cybersecurity made
               <br />
-              <span className="text-[var(--teal)]">simple for your team.</span>
+              <span className="text-[var(--accent-on-dark)]">simple for your team.</span>
             </h2>
           </div>
 
@@ -73,11 +73,11 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Work email address"
                   required
-                  className="flex-1 border border-white/15 bg-white/[0.06] px-4 py-3.5 text-[0.9375rem] text-white placeholder:text-white/30 outline-none rounded-[6px] transition-colors focus:border-[var(--teal)]/60"
+                  className="flex-1 border border-white/15 bg-white/[0.06] px-4 py-3.5 text-[0.9375rem] text-white placeholder:text-white/30 outline-none rounded-full transition-colors focus:border-[var(--accent-on-dark)]/60"
                 />
                 <button
                   type="submit"
-                  className="shrink-0 px-6 py-3.5 text-[0.8125rem] font-bold text-[var(--navy)] bg-[var(--teal)] rounded-[6px] hover:bg-[#00c9f0] transition-colors duration-200"
+                  className="shrink-0 px-6 py-3.5 text-[0.8125rem] font-bold text-[var(--navy-deep)] bg-[var(--accent-soft)] rounded-full hover:bg-white transition-colors duration-200"
                 >
                   Subscribe
                 </button>
@@ -98,13 +98,13 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-5">
-              <div className="flex items-center justify-center w-7 h-7 rounded-md bg-[var(--teal)]">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center justify-center w-7 h-7 rounded-full bg-[var(--accent-soft)]">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--navy-deep)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
                   <circle cx="12" cy="12" r="3" />
                 </svg>
               </div>
-              <span className="text-[15px] font-bold text-white tracking-[-0.01em]">CyberSubmarine</span>
+              <span className="text-[15px] font-medium font-[family-name:var(--font-display)] text-white tracking-[-0.01em]">CyberSubmarine</span>
             </div>
             <p className="text-[14px] leading-[1.7] text-white/50 max-w-[240px]">
               Practical cybersecurity for small business — without the jargon or the consultant fee.

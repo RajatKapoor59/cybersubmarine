@@ -210,11 +210,10 @@ export function BlogSidebar({ currentSlug, currentTags, currentCategory, allPost
             <a
               key={tag}
               href={`/tags/${tag}`}
-              className="border px-3 py-1 text-sm font-medium transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              className="px-3.5 py-1 text-sm font-medium rounded-full transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--accent-text)]"
               style={{
-                borderColor: currentTags.includes(tag) ? "var(--accent)" : "var(--border)",
-                color: currentTags.includes(tag) ? "var(--accent)" : "var(--muted)",
-                borderRadius: "var(--radius)",
+                backgroundColor: currentTags.includes(tag) ? "var(--accent-soft)" : "var(--surface)",
+                color: currentTags.includes(tag) ? "var(--accent-text)" : "var(--muted)",
               }}
             >
               #{tag}

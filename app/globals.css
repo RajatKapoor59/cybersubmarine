@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F5F7FA;
-  --fg: #0D1B2A;
-  --muted: #5A6A7A;
-  --accent: #00B4D8;        /* decorative: borders, bg fills, button fills on dark */
-  --accent-text: #007391;   /* text on light bg: 5.4:1 AA on white */
-  --accent-soft: #E0F7FC;
-  --surface: #EEF2F7;
-  --border: #D1D9E6;
-  --card: #FFFFFF;
-  --navy: #0D1B2A;
-  --teal: #00B4D8;
-  --radius: 8px;
+  /* Hugin-inspired sage palette — staging branch: design/hugin-theme */
+  --bg: #E9EFE2;             /* pale sage canvas */
+  --fg: #171911;             /* near-black, warm-green cast */
+  --muted: #5E6B57;          /* muted sage-gray for subtext */
+  --accent: #171911;         /* decorative: monochrome accent (buttons, borders) */
+  --accent-text: #2F3D28;    /* text on light bg: deep forest, AA on --bg */
+  --accent-soft: #D9E4CC;
+  --surface: #DEE7D3;        /* card surface, one step deeper than bg */
+  --border: #C9D5BA;
+  --card: #F3F6EE;
+  --navy: #171911;           /* repointed: dark band bg (was navy, now near-black sage) */
+  --navy-deep: #1E2417;      /* deeper sage-black for footer/dark bands */
+  --teal: #3F5A3A;           /* repointed: forest-green accent (was teal) */
+  --accent-on-dark: #B9CBA8; /* light sage text/labels for use on --navy-deep bands */
+  --radius: 14px;
 }
 
 @theme inline {

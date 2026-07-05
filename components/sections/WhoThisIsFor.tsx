@@ -96,7 +96,7 @@ export function WhoThisIsFor() {
                 {a.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--accent-text)] bg-[var(--accent-soft)] rounded-[4px]"
+                    className="px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--accent-text)] bg-[var(--accent-soft)] rounded-full"
                   >
                     {tag}
                   </span>
