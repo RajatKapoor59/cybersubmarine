@@ -38,7 +38,7 @@ export function FeaturedPost({ post }: FeaturedPostProps) {
               <span className="text-[0.875rem] font-bold uppercase tracking-widest text-accent">
                 Featured
               </span>
-              {category && <Badge color={category.color}>{category.name}</Badge>}
+              {category && <Badge>{category.name}</Badge>}
             </div>
             <h2 className="mb-4 font-[family-name:var(--font-display)] text-2xl font-bold leading-snug transition-colors group-hover:text-accent sm:text-3xl">
               {post.title}

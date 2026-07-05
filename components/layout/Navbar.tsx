@@ -99,7 +99,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#newsletter"
-              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-[var(--bg)] bg-[var(--fg)] rounded-full hover:opacity-85 transition-opacity duration-200"
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-[var(--bg)] bg-[var(--fg)] rounded-full hover:bg-[var(--teal)] transition-colors duration-200"
             >
               Get free guides
             </Link>

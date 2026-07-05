@@ -38,10 +38,10 @@ export function CyberHero() {
 
         {/* H1 */}
         <h1 className="hero-h1 mb-6">
-          <span className="line block font-[family-name:var(--font-display)] text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-[var(--fg)]">
+          <span className="line block font-[family-name:var(--font-display)] font-bold text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.08] tracking-[-0.02em] text-[var(--fg)]">
             Effortless cybersecurity
           </span>
-          <span className="line block font-[family-name:var(--font-display)] italic text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-[var(--accent-text)]">
+          <span className="line block font-[family-name:var(--font-display)] font-bold text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.08] tracking-[-0.02em] text-[var(--accent-text)]">
             for small business.
           </span>
         </h1>
@@ -55,13 +55,13 @@ export function CyberHero() {
         <div className="hero-ctas flex flex-wrap items-center justify-center gap-4 mb-16">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[15px] font-semibold text-[var(--bg)] bg-[var(--fg)] rounded-full hover:opacity-85 transition-opacity duration-200"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[15px] font-semibold text-[var(--bg)] bg-[var(--fg)] rounded-full hover:bg-[var(--teal)] transition-colors duration-200"
           >
             Browse the guides
           </Link>
           <Link
             href="/#start-here"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[15px] font-semibold text-[var(--fg)] border border-[var(--border)] rounded-full hover:border-[var(--fg)]/40 transition-colors duration-200"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[15px] font-semibold text-[var(--fg)] bg-transparent border border-[var(--border)] rounded-full hover:bg-[var(--fg)] hover:text-[var(--bg)] hover:border-[var(--fg)] transition-colors duration-200"
           >
             Start here
           </Link>

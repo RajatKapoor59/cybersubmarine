@@ -1,114 +1,142 @@
 ---
 name: blog-thumbnail
-description: Generate and save an AI cover image for a CyberSubmarine blog post. Fetches post data from Sanity, crafts a tailored image prompt, generates the image, and saves it directly as the post's coverImage in Sanity.
+description: Generate an SVG-based, hand-drawn line-art cover thumbnail (organic blob frame, radar/burst/scatter backdrop, topic icon) for a CyberSubmarine blog post and save it to Sanity as AVIF. Auto-trigger whenever a new blog post is created or published in Sanity and has no coverImage — do not wait to be asked.
 user_invocable: true
 ---
 
 # Blog Thumbnail Skill
 
-Generates a professional cover image for a CyberSubmarine blog post and saves it to Sanity.
+Generates a thumbnail entirely from code — no AI image generation. It composes a few small SVG pieces (an organic "blob" frame, an optional decorative backdrop, and 1–2 topic icons) from `kit.js`, rasterizes the result to AVIF with `sharp`, and uploads it as the post's `coverImage` in Sanity.
 
-## When to Trigger
+This is the CyberSubmarine brand system carried over from the site's hero illustration (see `components/sections/CyberHero.tsx` on the `design/hugin-theme` branch) — pale sage blob, near-black line art, radar rings. Every thumbnail should look like it belongs to the same family while still being visually distinct per post.
 
-- User says `/blog-thumbnail` with or without a slug
-- User asks to "generate a thumbnail", "create a cover image", or "add an image" for a blog post
+## When to trigger
 
-## Step-by-Step Process
+- User runs `/blog-thumbnail` with or without a slug.
+- User asks to "generate a thumbnail", "create a cover image", or "add a cover" for a post.
+- **Proactively**: any time you create, import, or publish a blog post document in Sanity during this conversation (e.g. as the last step of an article-writing workflow) and it has no `coverImage` — generate one without being asked, then mention you did it.
 
-### Step 1 — Get the slug
+## Step 1 — Get the post
 
-If the user provided a slug (e.g. `/blog-thumbnail what-is-managed-xdr`), use it directly.
+If given a slug, use it. Otherwise query Sanity for posts missing a cover and ask the user to pick one (or just do all of them if the user says "all"):
 
-If not, query Sanity for all posts and ask the user to pick one:
 ```groq
-*[_type == "post"] | order(publishedAt desc) { "slug": slug.current, title }
+*[_type == "post" && !defined(coverImage)] | order(publishedAt desc) { "slug": slug.current, title }
 ```
 
-### Step 2 — Fetch post data
+Then fetch the full record:
 
-Query Sanity for the post:
 ```groq
 *[_type == "post" && slug.current == $slug][0] {
-  _id,
-  title,
-  excerpt,
-  "category": category->name
+  _id, title, excerpt, "category": category->slug.current
 }
 ```
 
-Use projectId `eucyejox`, dataset `production`.
+Use `resource: { projectId: "eucyejox", dataset: "production" }`.
 
-### Step 3 — Craft the image prompt
+## Step 2 — Pick the composition
 
-Build a prompt tailored to the article topic. Follow these rules:
+Read the title + excerpt + category and match against the table below (first match wins; combine keywords freely — this table is a starting point, not an exhaustive list). Every entry gives: icon(s) with position/scale, and a backdrop.
 
-**Style anchors (always include):**
-- Professional editorial photography or clean digital illustration
-- Dark, moody, high-contrast lighting — navy blues, deep teals, near-black backgrounds
-- No text, logos, words, or watermarks in the image
-- No people's faces unless absolutely central to the topic
-- Cinematic, wide-aspect composition suitable for a blog header (16:9)
+Canvas is always 1600×1200, center `(CX, CY) = (800, 600)`. Icon coordinates below assume that center; offset icons are given as absolute x/y.
 
-**Topic-to-visual mapping — use these as starting points:**
+| Topic keywords | Icon(s) | Backdrop |
+|---|---|---|
+| phishing, email, spoofing, BEC | `envelope` (badge: true) at center, scale 1.2 | `radarRings` |
+| SOC, monitoring, detection, XDR, MDR, alerts | `monitor` at center, scale 1.2 | `radarRings` |
+| compliance, SOC 2, ISO 27001, certification, audit prep | `document` at center-left (x-50), scale 1.4 **+** `shield` (check: true) offset (x+115,y+115), scale 0.68 | none (`""`) |
+| audit, assessment, maturity, scoring, benchmarks | `gauge` at center, scale 1.5 | `radarRings` |
+| ransomware, breach, incident response, "what to do when" | `lock` (broken: true) at center, scale 1.35 **+** `triangleAlert` offset (x+145,y-135), scale 0.52 | `radiatingBurst` |
+| MSSP, managed security, partners, outsourcing | `networkNodes` at center, scale 1.4 | `scatterDots` |
+| cloud, Microsoft 365, SharePoint, Teams, Azure | `cloud` at (x, y-10), scale 1.3 **+** `lock` (broken: false) at (x, y+35), scale 0.62 | `gridDots` |
+| identity, access, MFA, conditional access, SSO | `key` at (x-10, y), scale 1.3 | `radarRings` |
+| biometrics, passwordless, device trust | `fingerprint` at center, scale 1.4 | `scatterDots` |
+| backup, disaster recovery, infrastructure, servers | `server` at center, scale 1.3 | `gridDots` |
+| tool comparisons, vendor reviews | `magnifier` at center, scale 1.3 | `scatterDots` |
+| policy, documentation, requirements (no better match) | `document` at center, scale 1.4 | none (`""`) |
 
-| Topic keywords | Visual direction |
-|---|---|
-| SOC / monitoring / analysts | Server room with blue glow, multiple screens showing dashboards |
-| XDR / MDR / detection | Abstract network nodes connecting across dark background, data flow |
-| Cyber insurance | Modern office with subtle digital overlay, document/shield motif |
-| White label / MSP / partners | Two professionals in a modern office, tech background |
-| Ransomware / incident / breach | Red-tinted locked server, warning light glow |
-| Phishing / email | Close-up of laptop screen with glowing inbox, shallow depth of field |
-| Compliance / regulation | Clean minimal desk with documents, cool blue lighting |
-| Identity / MFA / access | Fingerprint or key glowing in teal against dark background |
+If nothing matches well, default to `shield` (check: true) at center, scale 1.3, with `radarRings` — it's the most generic "security" icon.
 
-Combine the article title, excerpt, and category to pick the best visual direction. Write a 2–3 sentence prompt that is specific and cinematic.
+Available icon names (see `kit.js`): `envelope`, `monitor`, `shield`, `document`, `lock`, `triangleAlert`, `networkNodes`, `key`, `magnifier`, `cloud`, `server`, `gauge`, `fingerprint`.
+Available backdrops: `radarRings`, `scatterDots`, `radiatingBurst`, `gridDots`, or none.
 
-**Example prompt for "What is Managed XDR?":**
-> "A dark server room with rows of rack-mounted hardware bathed in deep teal and navy blue light. Glowing network connection lines arc between nodes in the foreground, suggesting real-time threat detection. Cinematic wide-angle shot with dramatic volumetric lighting, no text or people, editorial photography style."
+**Don't reuse the exact same icon+backdrop pairing back-to-back** if generating several thumbnails in one session — vary it even within the same topic bucket (e.g. alternate `radarRings` and `scatterDots` for two SOC posts) so a blog index page doesn't look repetitive.
 
-### Step 4 — Generate the image
+## Step 3 — Derive a deterministic seed
 
-Call `mcp__sanity__generate_image` with:
-- `resource`: `{ projectId: "eucyejox", dataset: "production" }`
-- `prompt`: the crafted prompt from Step 3
-- `intent`: "Generate cover image for CyberSubmarine blog post: [title]"
+Compute a seed from the slug so re-running for the same post gives the same blob shape, but different posts look different:
 
-### Step 5 — Save to Sanity
+```
+seed = (sum of character codes in slug) % 1000 / 100   →  a float roughly in [0, 10)
+```
 
-After generation, you will receive an asset ID (e.g. `image-abc123-1200x630-jpg`).
+Use this as both `seed` (blob shape) and set `marginSeed = seed + 5` (the margin dot-field — generate.js already offsets this by default, no need to pass it explicitly unless you want to override).
 
-Patch the post document using `mcp__sanity__patch_document_from_json`:
-- `documentId`: the post's `_id`
-- `set`:
-  ```json
-  [
-    {
-      "path": "coverImage",
-      "value": {
-        "_type": "image",
-        "asset": { "_type": "reference", "_ref": "<assetId>" },
-        "alt": "<article title> — CyberSubmarine"
-      }
-    }
+## Step 4 — Generate the image
+
+Run the generator from the skill directory:
+
+```bash
+node .claude/skills/blog-thumbnail/generate.js '<json-spec>' <output-path-without-extension>
+```
+
+Spec shape:
+
+```json
+{
+  "seed": 4.2,
+  "blobRadius": 430,
+  "backdrop": "radarRings",
+  "icons": [
+    { "name": "envelope", "x": 800, "y": 600, "scale": 1.2, "opts": true }
   ]
-  ```
+}
+```
 
-Then publish the draft using `mcp__sanity__publish_documents` with the post's `_id`.
+For two-icon compositions, add a second entry to `icons` with the offset x/y from the table above (CX=800, CY=600). `opts` is passed straight to the icon function — for `envelope` it's the badge boolean, for `shield` it's the checkmark boolean, for `lock` it's the broken boolean; omit for icons that take no options.
 
-### Step 6 — Confirm
+Output to a scratch path, e.g. `/tmp/cybersubmarine-thumb-<slug>`. This writes `.svg`, `.avif`, and `.webp` next to that prefix.
 
-Tell the user:
-- Which post was updated
-- A one-line description of the image that was generated
-- That it's live and will appear on the blog immediately
+## Step 5 — Upload to Sanity
 
-## Error Handling
+Sanity accepts AVIF directly (confirmed — full metadata/blurhash/palette extraction works). Upload via the HTTP API using the write token from `.env.local`:
 
-- If the post has no excerpt, use the title alone to craft the prompt
-- If `generate_image` fails, retry once with a simpler prompt
-- If patching fails due to schema validation, try deploying the schema first with `mcp__sanity__deploy_schema` using the post schema, then retry
+```bash
+curl -s -X POST \
+  "https://eucyejox.api.sanity.io/v2024-01-01/assets/images/production?filename=<slug>-cover.avif" \
+  -H "Authorization: Bearer ${SANITY_API_WRITE_TOKEN}" \
+  -H "Content-Type: image/avif" \
+  --data-binary @<output-path>.avif
+```
 
-## Tone
+Read `SANITY_API_WRITE_TOKEN` from `.env.local` (never print it, never commit it). The response JSON's `document._id` is the asset ID (looks like `image-<hash>-1600x1200-avif`).
 
-Be brief. Don't over-explain. After generating, just say what was made and confirm it's saved.
+If this ever fails with an unsupported-mimetype error, retry with the `.webp` file and `Content-Type: image/webp` instead — `generate.js` always produces both.
+
+## Step 6 — Patch and publish the post
+
+```
+mcp__sanity__patch_documents
+documentId: <post _id>
+set: [{ "path": "coverImage", "value": {
+  "_type": "image",
+  "asset": { "_type": "reference", "_ref": "<assetId>" },
+  "alt": "<post title> — CyberSubmarine"
+}}]
+```
+
+Then `mcp__sanity__publish_documents` with the post's `_id`.
+
+## Step 7 — Confirm
+
+Tell the user, briefly:
+- Which post got a thumbnail
+- The icon/backdrop combo used (one line, e.g. "envelope + alert badge, radar rings")
+- That it's live
+
+## Notes
+
+- No text, logos, or watermarks ever go in the image — the icon and shape carry the meaning.
+- Palette is fixed to the site's sage theme (`BG #E9EFE2`, `SURFACE #DEE7D3`, `BORDER #C9D5BA`, `FG #171911`) — defined once in `kit.js`, don't hardcode colors elsewhere.
+- If the brand palette in `app/globals.css` changes, update the constants at the top of `kit.js` to match.
+- `kit.js` and `generate.js` live in this skill folder and resolve `sharp` from the project's own `node_modules` (this folder is inside the repo tree) — don't copy them elsewhere to run.

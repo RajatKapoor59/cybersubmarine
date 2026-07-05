@@ -110,6 +110,31 @@ The site is deployed on Vercel. To deploy:
 5. Add your custom domain in Vercel → Settings → Domains
 6. Add the custom domain as a CORS origin in Sanity at sanity.io/manage → eucyejox → API → CORS
 
+## Blog Thumbnails — `/blog-thumbnail` skill
+
+Rebuilt July 5, 2026: thumbnails are no longer AI-generated photos. They're now hand-coded SVG illustrations in the same style as the homepage hero — an organic sage "blob" frame, an optional backdrop (radar rings, radiating burst, scattered dots, or a grid), and 1–2 simple line-art icons matched to the post's topic (envelope for phishing, broken lock for incident response, document + shield for compliance, etc). Rendered to AVIF and uploaded straight to Sanity as the post's cover image — no design tool, no photo licensing, no repeated AI-generation cost.
+
+- Runs automatically whenever a new post is created/published without a cover image, or on demand via `/blog-thumbnail [slug]`.
+- The asset "kit" (blob generator + backdrops + icon library) lives at `.claude/skills/blog-thumbnail/kit.js`, with a CLI renderer at `.claude/skills/blog-thumbnail/generate.js`.
+- To add a new icon or topic pairing: edit the icon library in `kit.js` and the keyword-to-icon table in `.claude/skills/blog-thumbnail/SKILL.md`.
+- Palette is hardcoded in `kit.js` to match `app/globals.css` — if the site's color tokens change, update both.
+
+## Design Staging Branch — `design/hugin-theme`
+
+Started July 5, 2026: a staging branch to experiment with a new brand direction inspired by hugin.io — pale sage-green backgrounds, near-black text, a serif display headline font, and organic "blob" shape frames instead of hard rectangles. Your live preview follows whichever branch is checked out, so right now you're seeing this new look; your original navy/teal design is untouched on `main`.
+
+- **Colors**: Pale sage bg (`#E9EFE2`), near-black text (`#171911`), deeper sage card surface (`#DEE7D3`), deep sage-black footer band (`#1E2417`). Monochrome accent system — no separate "accent color," just light/dark sage and near-black, per Hugin's minimal palette.
+- **Fonts**: Using **Frank Ruhl Libre** (bold serif) for big headlines, paired with the existing **Inter** for body/nav. Swapped in from an earlier Fraunces/italic pairing that read too soft/feminine for a cybersecurity brand — Frank Ruhl Libre is denser and more structural.
+- **Shapes**: Added an organic "blob" frame (CSS border-radius trick) around the hero illustration, in place of the old hard-edged gradient hero. This is the reusable pattern to apply to other imagery going forward.
+- **Buttons**: Solid black pill buttons now hover to forest green (`var(--teal)`, repointed to `#3F5A3A`) instead of just fading opacity; outline buttons fill solid black on hover. Applied across Navbar, Hero, Footer.
+- **Topic area cards**: Removed the old per-category rainbow colors (blue/orange/purple top-strips) — icons are now a uniform sage circle, matching the "Who this is for" cards.
+- **Tags**: All tag pills (blog post tags, sidebar tag cloud, audience tags, and blog card category labels) are now rounded-full sage pills instead of square-ish bordered boxes or rainbow-colored text, consistent with the button/pill shape language.
+- **Scroll animations**: Fixed a sync bug between the smooth-scroll library (Lenis) and the scroll-triggered reveal animations (GSAP ScrollTrigger) — they were running on separate render loops, which caused the "lagging" stutter on card/section reveals while scrolling. Now driven by a single synced loop (`components/SmoothScroll.tsx`).
+- **Updated so far**: color tokens (`app/globals.css`), fonts (`app/layout.tsx`), Navbar, Hero, Footer, TopicPillars, tag components (`Badge`, `BlogCard`, blog post tags, sidebar tag cloud), scroll/animation sync. Homepage sections below the hero (WhoThisIsFor, StartHere, LatestGuides, TrustSignals) pull from the shared color tokens, so they picked up the new palette automatically.
+- **Not yet touched**: Blog listing/post page layout, About/Contact, Categories page layout — still on older structural styling since they reference some colors directly beyond just tags.
+- **To compare against the current live site**: `git checkout main` restores the navy/teal version.
+- **To keep iterating on this direction**: stay on `design/hugin-theme` and keep asking for changes — nothing here is merged into `main` yet.
+
 ## Recent Changes
 
 - May 2, 2026: **Complete rebrand to CyberSubmarine** — new color scheme (navy/teal), Inter font, CyberSubmarine navbar and footer, 6 new topic categories, rebuilt homepage with 6 new sections (CyberHero, WhoThisIsFor, TopicPillars, StartHere, LatestGuides, TrustSignals). About and contact pages still need rebuild.

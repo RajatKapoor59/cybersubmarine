@@ -58,7 +58,7 @@ export function BlogCard({ post, index = 0, layout = "vertical" }: BlogCardProps
           <div className="flex flex-col justify-center">
             <div className="mb-3 flex items-center gap-3">
               {category && (
-                <span className="text-[0.875rem] font-semibold uppercase tracking-wider" style={{ color: category.color }}>
+                <span className="rounded-full bg-[var(--accent-soft)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-text)]">
                   {category.name}
                 </span>
               )}
@@ -90,7 +90,7 @@ export function BlogCard({ post, index = 0, layout = "vertical" }: BlogCardProps
         </div>
         <div className="mb-2.5 flex items-center gap-3">
           {category && (
-            <span className="text-[0.875rem] font-semibold uppercase tracking-wider" style={{ color: category.color }}>
+            <span className="rounded-full bg-[var(--accent-soft)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-text)]">
               {category.name}
             </span>
           )}

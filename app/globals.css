@@ -14,6 +14,7 @@
   --navy: #171911;           /* repointed: dark band bg (was navy, now near-black sage) */
   --navy-deep: #1E2417;      /* deeper sage-black for footer/dark bands */
   --teal: #3F5A3A;           /* repointed: forest-green accent (was teal) */
+  --accent-on-dark: #B9CBA8; /* light sage text/labels for use on --navy-deep bands */
   --radius: 14px;
 }
 

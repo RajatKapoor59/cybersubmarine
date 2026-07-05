@@ -260,7 +260,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <Link
                       key={tag}
                       href={`/tags/${tag}`}
-                      className="px-3 py-1.5 text-[12px] font-medium border border-[var(--border)] text-[var(--muted)] rounded-[6px] hover:border-[var(--fg)] hover:text-[var(--fg)] transition-colors duration-150"
+                      className="px-3.5 py-1.5 text-[12px] font-medium bg-[var(--surface)] text-[var(--muted)] rounded-full hover:bg-[var(--accent-soft)] hover:text-[var(--accent-text)] transition-colors duration-150"
                     >
                       #{tag}
                     </Link>

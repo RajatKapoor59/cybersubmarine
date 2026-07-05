@@ -6,14 +6,13 @@ interface BadgeProps {
   className?: string;
 }
 
-export function Badge({ children, color, className }: BadgeProps) {
+export function Badge({ children, className }: BadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center text-[0.875rem] font-semibold uppercase tracking-wider",
+        "inline-flex items-center rounded-full bg-[var(--accent-soft)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-text)]",
         className
       )}
-      style={color ? { color } : undefined}
     >
       {children}
     </span>
