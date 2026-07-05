@@ -1,8 +1,16 @@
-import { posts } from "@/data/posts";
+import { getAllPosts } from "@/lib/sanity.queries";
 
 const SITE_URL = "https://cybersubmarine.com";
 
-export function GET() {
+export const revalidate = 60;
+
+function escapeXml(value: string): string {
+  return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+export async function GET() {
+  const posts = await getAllPosts().catch(() => []);
+
   const items = posts
     .map(
       (post) => `    <item>
@@ -11,7 +19,7 @@ export function GET() {
       <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-      <category>${post.category}</category>
+      <category>${escapeXml(post.category)}</category>
     </item>`
     )
     .join("\n");

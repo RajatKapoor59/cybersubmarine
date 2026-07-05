@@ -87,7 +87,10 @@
       "Bash(curl -sIL \"https://cybersubmarine.com/categories/design\")",
       "mcp__sanity__patch_document_from_json",
       "Bash(curl -s 'https://eucyejox.api.sanity.io/v2024-01-01/data/query/production?query=*[_type==%22post%22]{_id,title,%22slug%22:slug.current,publishedAt}' -H 'Authorization: Bearer skroq4C3li3ZowpjPemD0CgSNKdM1iVcnTuVxSmgLlHb8S0fzx4nZ5ioWzSzXQBEhnKWhjPwZGXN26njnw4CV33gRiN8fMUelK5mfRv7wCOusi0ZM4Eom0eh7xo2kAxLkAWL4shCTvNl2Qzsy5DuUuLlmML7jT46slaBQRtG5WmsFJoswIvP')",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(git checkout *)",
+      "Bash(find / -iname \"hero-runner.webp\")",
+      "Bash(find / -iname \"*.webp\" -path \"*images*\")"
     ]
   },
   "enabledMcpjsonServers": [

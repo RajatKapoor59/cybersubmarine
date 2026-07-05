@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     title: category.name,
     description: category.description,
     openGraph: {
-      title: `${category.name} — Inkwell`,
+      title: `${category.name} — CyberSubmarine`,
       description: category.description,
       url: `/categories/${slug}`,
     },
