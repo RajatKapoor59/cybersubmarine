@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
 
 export function Navbar() {
   const pathname = usePathname();
-  const borderRef = useRef<HTMLDivElement>(null);
+  const navInnerRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileLinksRef = useRef<HTMLDivElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -22,12 +22,13 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (!borderRef.current) return;
-    if (scrolled) {
-      gsap.to(borderRef.current, { scaleX: 1, opacity: 1, duration: 0.4, ease: "power2.out" });
-    } else {
-      gsap.to(borderRef.current, { scaleX: 0, opacity: 0, duration: 0.3, ease: "power2.in" });
-    }
+    if (!navInnerRef.current) return;
+    gsap.to(navInnerRef.current, {
+      height: scrolled ? 56 : 68,
+      boxShadow: scrolled ? "0 8px 24px -12px rgba(23, 25, 17, 0.18)" : "0 0px 0px 0px rgba(23, 25, 17, 0)",
+      duration: 0.4,
+      ease: "power2.out",
+    });
   }, [scrolled]);
 
   useEffect(() => {
@@ -51,12 +52,9 @@ export function Navbar() {
   useEffect(() => { setMobileOpen(false); }, [pathname]);
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
-      style={{ backgroundColor: scrolled ? "rgba(233, 239, 226, 0.92)" : "rgba(233, 239, 226, 0.4)", backdropFilter: "blur(8px)" }}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]">
       <div className="mx-auto max-w-[1280px] px-6 md:px-10">
-        <div className="flex items-center justify-between h-[68px]">
+        <div ref={navInnerRef} className="flex items-center justify-between h-[68px]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--fg)]">
@@ -114,12 +112,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-
-      <div
-        ref={borderRef}
-        className="absolute bottom-0 left-0 right-0 h-[1px] bg-[var(--border)] origin-left"
-        style={{ transform: "scaleX(0)", opacity: 0 }}
-      />
 
       <div
         ref={mobileMenuRef}
