@@ -95,7 +95,8 @@
       "Bash(node *)",
       "Artifact",
       "Bash(sed -i '' 's#require\\(\"./kit\"\\)#require\\(\"./.tmp-kit\"\\)#' /Users/rajatkapoor/ShipStudio/cybersubmarine/.tmp-build.js /Users/rajatkapoor/ShipStudio/cybersubmarine/.tmp-build2.js)",
-      "Bash(sed -i '' 's#const outDir = __dirname;#const outDir = \"/private/tmp/claude-501/-Users-rajatkapoor-ShipStudio-cybersubmarine/26d20b84-3801-4b87-9b04-41d545cdefa0/scratchpad/thumbnails\";#' /Users/rajatkapoor/ShipStudio/cybersubmarine/.tmp-build.js)"
+      "Bash(sed -i '' 's#const outDir = __dirname;#const outDir = \"/private/tmp/claude-501/-Users-rajatkapoor-ShipStudio-cybersubmarine/26d20b84-3801-4b87-9b04-41d545cdefa0/scratchpad/thumbnails\";#' /Users/rajatkapoor/ShipStudio/cybersubmarine/.tmp-build.js)",
+      "Bash(git --no-pager diff .claude/settings.local.json)"
     ]
   },
   "enabledMcpjsonServers": [
