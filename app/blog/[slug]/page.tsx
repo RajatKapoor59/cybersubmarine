@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: post.title,
       description: post.excerpt,
       url: `/blog/${slug}`,
-      images: [{ url: "coverImage" in post ? post.coverImage : (sanityPost?.coverImage?.asset?.url ?? ""), width: 1200, height: 630, alt: post.title }],
+      images: [{ url: sanityPost?.coverImage?.asset?.url ?? (typeof mdxPost?.coverImage === "string" ? mdxPost.coverImage : ""), width: 1200, height: 630, alt: post.title }],
       publishedTime: "date" in post ? post.date : sanityPost?.publishedAt ?? "",
       authors: [authorName],
       tags: post.tags,

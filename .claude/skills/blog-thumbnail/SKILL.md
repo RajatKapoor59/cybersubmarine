@@ -1,12 +1,12 @@
 ---
 name: blog-thumbnail
-description: Generate an SVG-based, hand-drawn line-art cover thumbnail (organic blob frame, radar/burst/scatter backdrop, topic icon) for a CyberSubmarine blog post and save it to Sanity as AVIF. Auto-trigger whenever a new blog post is created or published in Sanity and has no coverImage — do not wait to be asked.
+description: Generate an SVG-based, hand-drawn line-art cover thumbnail (organic blob frame, radar/burst/scatter backdrop, topic icon) for a CyberSubmarine blog post and save it to Sanity as WebP. Auto-trigger whenever a new blog post is created or published in Sanity and has no coverImage — do not wait to be asked.
 user_invocable: true
 ---
 
 # Blog Thumbnail Skill
 
-Generates a thumbnail entirely from code — no AI image generation. It composes a few small SVG pieces (an organic "blob" frame, an optional decorative backdrop, and 1–2 topic icons) from `kit.js`, rasterizes the result to AVIF with `sharp`, and uploads it as the post's `coverImage` in Sanity.
+Generates a thumbnail entirely from code — no AI image generation. It composes a few small SVG pieces (an organic "blob" frame, an optional decorative backdrop, and 1–2 topic icons) from `kit.js`, rasterizes the result to WebP with `sharp`, and uploads it as the post's `coverImage` in Sanity.
 
 This is the CyberSubmarine brand system carried over from the site's hero illustration (see `components/sections/CyberHero.tsx` on the `design/hugin-theme` branch) — pale sage blob, near-black line art, radar rings. Every thumbnail should look like it belongs to the same family while still being visually distinct per post.
 
@@ -99,19 +99,19 @@ Output to a scratch path, e.g. `/tmp/cybersubmarine-thumb-<slug>`. This writes `
 
 ## Step 5 — Upload to Sanity
 
-Sanity accepts AVIF directly (confirmed — full metadata/blurhash/palette extraction works). Upload via the HTTP API using the write token from `.env.local`:
+Upload the **`.webp`** file (default) using the write token from `.env.local`:
 
 ```bash
 curl -s -X POST \
-  "https://eucyejox.api.sanity.io/v2024-01-01/assets/images/production?filename=<slug>-cover.avif" \
+  "https://eucyejox.api.sanity.io/v2024-01-01/assets/images/production?filename=<slug>-cover.webp" \
   -H "Authorization: Bearer ${SANITY_API_WRITE_TOKEN}" \
-  -H "Content-Type: image/avif" \
-  --data-binary @<output-path>.avif
+  -H "Content-Type: image/webp" \
+  --data-binary @<output-path>.webp
 ```
 
-Read `SANITY_API_WRITE_TOKEN` from `.env.local` (never print it, never commit it). The response JSON's `document._id` is the asset ID (looks like `image-<hash>-1600x1200-avif`).
+Read `SANITY_API_WRITE_TOKEN` from `.env.local` (never print it, never commit it). The response JSON's `document._id` is the asset ID (looks like `image-<hash>-1600x1200-webp`).
 
-If this ever fails with an unsupported-mimetype error, retry with the `.webp` file and `Content-Type: image/webp` instead — `generate.js` always produces both.
+`generate.js` also produces an `.avif` alongside — Sanity itself accepts AVIF fine (confirmed: full metadata/blurhash/palette extraction works on upload). WebP is the default here because a *separate*, since-fixed bug in `app/blog/[slug]/page.tsx`'s `generateMetadata` (an `"coverImage" in post` check that grabbed the raw Sanity image object instead of its URL string) broke the Next.js static build the first time any post ever got a real `coverImage` — this had nothing to do with image format, but WebP was chosen as the safer default while diagnosing it. If you want to switch back to AVIF as the primary upload, it should work now that the real bug is fixed — just swap `.webp`/`image/webp` for `.avif`/`image/avif` above.
 
 ## Step 6 — Patch and publish the post
 
